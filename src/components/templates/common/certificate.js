@@ -1,4 +1,5 @@
 import { get } from "lodash";
+import React from "react";
 import { tz } from "moment-timezone";
 import {
   IMG_CERTIFICATE_SEAL,

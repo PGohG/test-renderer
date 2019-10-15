@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import React from "react";
 import TranscriptStyles from "./transcriptStyles";
 import TranscriptHeader from "./transcriptHeader";
 import Recipient from "./recipient";
