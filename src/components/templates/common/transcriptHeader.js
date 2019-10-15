@@ -1,4 +1,5 @@
 import { IMG_TRANSCRIPT_ITE } from "./images";
+import React from "react";
 
 export const fullWidthStyle = {
   width: "100%",

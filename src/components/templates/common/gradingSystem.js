@@ -1,5 +1,6 @@
 import _ from "lodash";
 import PropTypes from "prop-types";
+import React from "react";
 
 const GradeSys = ({ certificate }) => {
   const gs = _(certificate.additionalData.gradeSystem)

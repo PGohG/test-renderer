@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import React from "react";
 import RecipientAddress from "./recipientAddress";
 
 const Recipient = ({ certificate }) => (

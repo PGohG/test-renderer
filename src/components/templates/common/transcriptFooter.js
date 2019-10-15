@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import React from "react";
 import { IMG_SIGN_TP_DIR_AA } from "./images";
 
 export const fullWidthStyle = {

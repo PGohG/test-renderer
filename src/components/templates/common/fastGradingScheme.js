@@ -1,3 +1,5 @@
+import React from "react";
+
 import GradingSchemeStyles from "./gradingSchemeStyles";
 
 const FastGradingScheme = () => (

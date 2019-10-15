@@ -1,5 +1,6 @@
 import _ from "lodash";
 import PropTypes from "prop-types";
+import React from "react";
 
 const SubjectGrades = ({ certificate }) => {
   const semesters = _(certificate.transcript)
