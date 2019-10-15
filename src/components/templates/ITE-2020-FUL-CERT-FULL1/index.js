@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import MultiCertificateRenderer from "template-utils/MultiCertificateRenderer";
 import { approvedAddresses } from "../common";
 import ITECert from "./certificate";
 import ITETranscript from "../common/transcript";
