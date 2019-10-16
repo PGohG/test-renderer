@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { tz } from "moment-timezone";
 
 import {
   IMG_CERTIFICATE_SEAL,
@@ -22,6 +23,8 @@ import {
 	nameTextStyle,
 	titleTextStyle
 } from "./common/certStyles";
+
+const TIMEZONE = "Asia/Singapore";
 
 const formatDateFullMonthProper = dateString => {
   if (!dateString) return null;
