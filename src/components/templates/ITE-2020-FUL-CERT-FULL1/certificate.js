@@ -1,12 +1,14 @@
 import PropTypes from "prop-types";
 import React from "react";
 
+{/*
 import {
   renderLogoITE,
   renderFullCertAwardText,
   renderTwoSignatures,
   renderITEFooter
 } from "./common/certDetails";
+*/}
 
 const Template = ({ certificate }) => (
   <div>
@@ -18,10 +20,21 @@ const Template = ({ certificate }) => (
         <br />
         <br />
       </p>
+      {/*
       {renderLogoITE()}
+      */}
+	    <div className="row d-flex justify-content-center">
+	      <div className="col-1" />
+	      <div className="col-10">
+	        <img style={halfWidthStyle} src={IMG_CERT_FULL1_LOGO_ITE} />
+	      </div>
+	      <div className="col-1" />
+	    </div>
+      {/*
       {renderFullCertAwardText(certificate)}
       {renderTwoSignatures(certificate)}
       {renderITEFooter(certificate)}
+      */}
     </div>
   </div>
 );
