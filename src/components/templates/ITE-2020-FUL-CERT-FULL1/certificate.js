@@ -1,6 +1,14 @@
 import PropTypes from "prop-types";
 import React from "react";
 
+import {
+  IMG_CERTIFICATE_SEAL,
+  IMG_CERT_FULL1_LOGO_ITE,
+  IMG_CERT_NIEC1_LOGO_ITE,
+  IMG_CERT_NIEC1ITE_LOGO_ITE
+} from "./images";
+
+
 {/*
 import {
   renderLogoITE,
@@ -9,6 +17,11 @@ import {
   renderITEFooter
 } from "./common/certDetails";
 */}
+
+const halfWidthStyle = {
+  width: "55%",
+  height: "auto"
+};
 
 const Template = ({ certificate }) => (
   <div>
