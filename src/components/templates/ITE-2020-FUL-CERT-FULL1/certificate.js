@@ -304,6 +304,7 @@ const Template = ({ document }) => (
 
       {/*
       {renderITEFooter(certificate)}
+     */}
 
 	    <div className="container">
 	      <div
@@ -324,7 +325,6 @@ const Template = ({ document }) => (
 	        <div className="col-1" />
 	      </div>
 	    </div>
-      */}
 
     </div>
   </div>
