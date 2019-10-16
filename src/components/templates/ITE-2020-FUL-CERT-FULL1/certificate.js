@@ -131,7 +131,7 @@ import {
 */}
 
 
-const Template = ({ certificate }) => (
+const Template = ({ document }) => (
   <div>
     <div
       className="container"
@@ -160,16 +160,14 @@ const Template = ({ certificate }) => (
 		  <span style={arial16Pt}>It is hereby certified that</span>
 		</div>
 
-		{/*
+
 		<div className="ml-3">
 		  <div className="mr-3">
 			<div className="row d-flex justify-content-center">
-			  <span style={timesNewRoman32Pt}>{certificate.recipient.name}</span>
+			  <span style={timesNewRoman32Pt}>{document.recipient.name}</span>
 			</div>
 		  </div>{" "}
 		</div>
-
-*/}
 
       {/*
 	  <div>
@@ -280,6 +278,6 @@ const Template = ({ certificate }) => (
 );
 
 Template.propTypes = {
-  certificate: PropTypes.object.isRequired
+  document: PropTypes.object.isRequired
 };
 export default Template;
