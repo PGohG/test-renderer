@@ -121,10 +121,6 @@ const formatDateFullMonthProper = dateString => {
   return tz(date, TIMEZONE).format("D MMMM YYYY");
 };
 
-import {
-  renderFullCertAwardText
-} from "./common/certDetails";
-
 {/*
 import {
   renderLogoITE,
@@ -156,27 +152,7 @@ const Template = ({ document }) => (
 	      <div className="col-1" />
 	    </div>
 
-		{renderFullCertAwardText(document)}
-
       {/* renderFullCertAwardText(certificate)*/}
-      {/*
-		<div
-		  className="row d-flex justify-content-center"
-		  style={{ marginTop: "10rem" }}
-		>
-		  <span style={arial16Pt}>It is hereby certified that</span>
-		</div>
-
-
-		<div className="ml-3">
-		  <div className="mr-3">
-			<div className="row d-flex justify-content-center">
-			  <span style={timesNewRoman32Pt}>{document.recipient.name}</span>
-			</div>
-		  </div>{" "}
-		</div>
-
-      {/*
 	  <div>
 		<div
 		  className="row d-flex justify-content-center"
@@ -187,7 +163,7 @@ const Template = ({ document }) => (
 		<div className="ml-3">
 		  <div className="mr-3">
 			<div className="row d-flex justify-content-center">
-			  <span style={timesNewRoman32Pt}>{certificate.recipient.name}</span>
+			  <span style={timesNewRoman32Pt}>{document.recipient.name}</span>
 			</div>
 		  </div>{" "}
 		</div>
@@ -210,11 +186,8 @@ const Template = ({ document }) => (
 		<div className="row d-flex justify-content-center">
 		  <span style={arial16Pt}>was awarded the</span>
 		</div>
-		*/}
 
 		{/*renderCertDescr(certificate)*/}
-		{/*
-
 		  <div>
 			<p>
 			  <br />
@@ -223,7 +196,7 @@ const Template = ({ document }) => (
 			  <div className="mr-5">
 				<div className="row d-flex justify-content-center">
 				  <span style={timesNewRoman32Pt}>
-					<p style={timesNewRoman32Pt}>{certificate.description}</p>
+					<p style={timesNewRoman32Pt}>{document.description}</p>
 				  </span>
 				</div>
 			  </div>{" "}
@@ -231,7 +204,7 @@ const Template = ({ document }) => (
 			<div className="ml-5">
 			  <div className="mr-5">
 				<div className="row d-flex justify-content-center">
-				  {!certificate.description.includes(" in ") && (
+				  {!document.description.includes(" in ") && (
 					<span style={timesNewRoman32Pt}>
 					  <p style={timesNewRoman32Pt}>in</p>
 					</span>
@@ -244,7 +217,7 @@ const Template = ({ document }) => (
 				<div className="row d-flex justify-content-center">
 				  <span style={timesNewRoman32Pt}>
 					<p style={timesNewRoman32Pt}>
-					  {certificate.additionalData.courseDescription}
+					  {document.additionalData.courseDescription}
 					</p>
 				  </span>
 				</div>
@@ -255,7 +228,7 @@ const Template = ({ document }) => (
 				<div className="row d-flex justify-content-center">
 				  <span style={timesNewRoman32Pt}>
 					<p style={timesNewRoman32Pt}>
-					  {certificate.additionalData.courseSpecialisation}
+					  {document.additionalData.courseSpecialisation}
 					</p>
 				  </span>
 				</div>
@@ -267,14 +240,12 @@ const Template = ({ document }) => (
 			<div className="row d-flex justify-content-center">
 			  <span style={timesNewRoman32Pt}>
 				<p style={timesNewRoman32Pt}>
-				  {formatDateFullMonthProper(certificate.graduationDate)}
+				  {formatDateFullMonthProper(document.graduationDate)}
 				</p>
 			  </span>
 			</div>
+		  </div>
 	  </div>
-  </div>
-			*/}
-
 
       {/*
       {renderTwoSignatures(certificate)}
