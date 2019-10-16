@@ -18,21 +18,6 @@ const templates = [
 ];
 
 
-/*
-const ITE2020FULCERT1 = props => (
-  <MultiCertificateRenderer
-    templates={templates}
-    whitelist={approvedAddresses}
-    {...props}
-  />
-);
 
-ITE2020FULCERT1.displayName = "ITE-2020-FUL-CERT-FULL1 Template";
-ITE2020FULCERT1.propTypes = {
-  certificate: PropTypes.object.isRequired
-};
-
-export default ITE2020FULCERT1;
-*/
 
 export default templates;
