@@ -373,6 +373,7 @@ export const renderCertDescr = certificate => (
   </div>
 );
 */}
+
 export const renderFullCertAwardText = document => (
   <div>
     <div
@@ -408,7 +409,8 @@ export const renderFullCertAwardText = document => (
       <span style={arial16Pt}>was awarded the</span>
     </div>
 
-    {renderCertDescr(document)}
+    {/*{renderCertDescr(document)}
+    */}
   </div>
 );
 
