@@ -11,13 +11,15 @@ const templates = [
     template: ITECert
   },
   {
+    id: "transcript",
+    label: "Transcript",
+    template: ITETranscript
+  },
+  {
     id: "media",
     label: "Media",
     template: ITEMedia
   }
 ];
-
-
-
 
 export default templates;

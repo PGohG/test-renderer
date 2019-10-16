@@ -8,25 +8,23 @@ import FastGradingScheme from "./fastGradingScheme";
 import ExemptionFootNote from "./exemptionFootNote";
 import TranscriptFooter from "./transcriptFooter";
 
-const Transcript = ({ document }) => (
+const Transcript = ({ certificate }) => (
 	<div className="container">
 		<TranscriptStyles />
 
 		<div className="transcript-content">
 			<TranscriptHeader />
-			{/*
-			<Recipient certificate={document} />
-			<ExamResults certificate={document} />
+			<Recipient certificate={certificate} />
+			<ExamResults certificate={certificate} />
 			<FastGradingScheme />
-			<ExemptionFootNote certificate={document} />
-			<TranscriptFooter certificate={document} />
-			*/}
+			<ExemptionFootNote certificate={certificate} />
+			<TranscriptFooter certificate={certificate} />
 		</div>
 	</div>
 );
 
 Transcript.propTypes = {
-	document: PropTypes.object.isRequired
+	certificate: PropTypes.object.isRequired
 };
 
 export default Transcript;
