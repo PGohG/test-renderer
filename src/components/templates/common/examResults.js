@@ -13,7 +13,10 @@ const ExamResults = ({ certificate }) => (
       <div className="col-2"><strong>MODULE CODE</strong></div>
       <div className="col-6"><strong>MODULE TITLE</strong></div>
       <div className="col-2 credit-unit"><strong>CREDIT EARNED</strong></div>
-      <div className="col-2 grade"><strong>GRADE</strong></div>
+      <div className="col-2 grade"><strong>GRADE</strong>
+      <br />
+      <br />
+      </div>
 
     </div>
 
@@ -29,26 +32,31 @@ const ExamResults = ({ certificate }) => (
       <div className="col-3"><strong>GRADE POINT AVERAGE:</strong></div>
       <div className="col-9"><strong>{certificate.cumulativeScore.toFixed(2)}</strong>
       <br />
+      <br />
       </div>
 
       <div className="col-2"><strong>RESULT:</strong></div>
       <div className="col-10"><strong>{certificate.additionalData.transcriptData.resultStatement}</strong>
+      <br />
       <br />
       </div>
 
       <div className="col-2"><strong>AWARD:</strong></div>
       <div className="col-10"><strong>{certificate.additionalData.transcriptData.awardStatement}</strong>
       <br />
+      <br />
       </div>
 
       <div className="col-4"><strong>NATIONAL PHYSICAL FITNESS AWARD:</strong></div>
       <div className="col-8"><strong>{certificate.additionalData.transcriptData.napfaStatement}</strong>
+      <br />
       <br />
       </div>
 
       <div className="col-4"><strong>CO-CURRICULAR ACTIVITIES GRADE:</strong></div>
       <div className="col-8"><strong>{certificate.additionalData.transcriptData.ccaGrade}</strong></div>
       <div className="col-8"><strong>{certificate.additionalData.transcriptData.ccaAdvantage}</strong>
+      <br />
       <br />
       </div>
     </div>
