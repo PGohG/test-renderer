@@ -9,6 +9,7 @@ import {
   IMG_CERT_NIEC1ITE_LOGO_ITE
 } from "./common/images";
 
+{/*
 import {
 	fullWidthStyle,
 	halfWidthStyle,
@@ -23,8 +24,96 @@ import {
 	nameTextStyle,
 	titleTextStyle
 } from "./common/certStyles";
+*/}
 
 const TIMEZONE = "Asia/Singapore";
+
+const fullWidthStyle = {
+  width: "100%",
+  height: "auto"
+};
+
+const halfWidthStyle = {
+  width: "55%",
+  height: "auto"
+};
+
+const threeqartWidthStyle = {
+  width: "75%",
+  height: "auto"
+};
+
+const arial16Pt = {
+  fontFamily: "Arial",
+  fontSize: "24px",
+  textAlign: "center"
+};
+
+const arial10Pt = {
+  fontFamily: "Arial",
+  fontSize: "16px",
+  textAlign: "center",
+  marginTop: "0",
+  marginBottom: "0",
+  marginLeft: "0",
+  marginRight: "0"
+};
+
+const arial5Pt = {
+  fontFamily: "Arial",
+  fontSize: "15px",
+  textAlign: "start",
+  marginTop: "0",
+  marginBottom: "0"
+};
+
+const timesNewRoman24Pt = {
+  fontFamily: "Times New Roman",
+  fontSize: "16px",
+  fontWeight: "bold",
+  textAlign: "center",
+  color: "black",
+  marginTop: "0",
+  marginBottom: "0"
+};
+
+const timesNewRoman32Pt = {
+  fontFamily: "Times New Roman",
+  fontSize: "42px",
+  fontStyle: "italic",
+  fontWeight: "bold",
+  textAlign: "center",
+  color: "black",
+  marginTop: "0",
+  marginBottom: "0"
+};
+
+const printTextStyle = {
+  fontFamily: "TimesNewRoman",
+  fontStyle: "Italic",
+  fontWeight: "500!important",
+  fontSize: "1.2rem",
+  color: "#555",
+  textAlign: "center"
+};
+
+const COMTextStyle = {
+  fontFamily: "Arial",
+  color: "#111",
+  fontSize: "5.0rem",
+  fontWeight: "bold"
+};
+
+const nameTextStyle = {
+  fontSize: "3rem",
+  textAlign: "center"
+};
+
+const titleTextStyle = {
+  color: "rgb(30,93,200)",
+  fontSize: "3rem",
+  textAlign: "center"
+};
 
 const formatDateFullMonthProper = dateString => {
   if (!dateString) return null;
