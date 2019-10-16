@@ -264,11 +264,9 @@ const Template = ({ certificate }) => (
 				</p>
 			  </span>
 			</div>
-			*/}
-
 	  </div>
   </div>
-);
+			*/}
 
 
       {/*
