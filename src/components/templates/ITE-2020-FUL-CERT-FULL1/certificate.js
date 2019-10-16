@@ -159,6 +159,8 @@ const Template = ({ certificate }) => (
 		>
 		  <span style={arial16Pt}>It is hereby certified that</span>
 		</div>
+
+		{/*
 		<div className="ml-3">
 		  <div className="mr-3">
 			<div className="row d-flex justify-content-center">
@@ -167,7 +169,7 @@ const Template = ({ certificate }) => (
 		  </div>{" "}
 		</div>
 
-
+*/}
 
       {/*
 	  <div>
