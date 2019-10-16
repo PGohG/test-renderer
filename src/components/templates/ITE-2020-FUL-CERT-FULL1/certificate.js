@@ -153,6 +153,23 @@ const Template = ({ certificate }) => (
 	    </div>
 
       {/* renderFullCertAwardText(certificate)*/}
+		<div
+		  className="row d-flex justify-content-center"
+		  style={{ marginTop: "10rem" }}
+		>
+		  <span style={arial16Pt}>It is hereby certified that</span>
+		</div>
+		<div className="ml-3">
+		  <div className="mr-3">
+			<div className="row d-flex justify-content-center">
+			  <span style={timesNewRoman32Pt}>{certificate.recipient.name}</span>
+			</div>
+		  </div>{" "}
+		</div>
+
+
+
+      {/*
 	  <div>
 		<div
 		  className="row d-flex justify-content-center"
@@ -186,8 +203,11 @@ const Template = ({ certificate }) => (
 		<div className="row d-flex justify-content-center">
 		  <span style={arial16Pt}>was awarded the</span>
 		</div>
+		*/}
 
 		{/*renderCertDescr(certificate)*/}
+		{/*
+
 		  <div>
 			<p>
 			  <br />
@@ -244,8 +264,9 @@ const Template = ({ certificate }) => (
 				</p>
 			  </span>
 			</div>
-	  </div>
+			*/}
 
+	  </div>
   </div>
 );
 
