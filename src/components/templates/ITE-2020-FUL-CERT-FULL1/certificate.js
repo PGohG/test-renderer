@@ -20,10 +20,14 @@ import {
 	printTextStyle,
 	COMTextStyle,
 	nameTextStyle,
-	titleTextStyle,
-	formatDateFullMonthProper
+	titleTextStyle
 } from "./common/certStyles";
 
+const formatDateFullMonthProper = dateString => {
+  if (!dateString) return null;
+  const date = new Date(dateString);
+  return tz(date, TIMEZONE).format("D MMMM YYYY");
+};
 
 {/*
 import {
