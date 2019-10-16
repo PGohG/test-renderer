@@ -8,6 +8,10 @@ import {
   IMG_CERT_NIEC1ITE_LOGO_ITE
 } from "./common/images";
 
+import {
+  renderFullCertAwardText
+} from "./common/certDetails";
+
 
 {/*
 import {
@@ -43,8 +47,8 @@ const Template = ({ certificate }) => (
 	      </div>
 	      <div className="col-1" />
 	    </div>
-      {/*
       {renderFullCertAwardText(certificate)}
+      {/*
       {renderTwoSignatures(certificate)}
       {renderITEFooter(certificate)}
       */}
