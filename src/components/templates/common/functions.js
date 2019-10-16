@@ -1,5 +1,3 @@
-import React from "react";
-
 import { tz } from "moment-timezone";
 import { toWordsOrdinal, toWords } from "number-to-words";
 

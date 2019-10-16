@@ -1,5 +1,6 @@
 import _ from "lodash";
 import PropTypes from "prop-types";
+import React from "react";
 
 const formatYM = ymnum => {
 	if (ymnum.endsWith("01")) {	return 'JAN '+  ymnum.substr(0,4); };
