@@ -90,3 +90,9 @@ export const titleTextStyle = {
   fontSize: "3rem",
   textAlign: "center"
 };
+
+export const formatDateFullMonthProper = dateString => {
+  if (!dateString) return null;
+  const date = new Date(dateString);
+  return tz(date, TIMEZONE).format("D MMMM YYYY");
+};

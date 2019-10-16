@@ -20,7 +20,8 @@ import {
 	printTextStyle,
 	COMTextStyle,
 	nameTextStyle,
-	titleTextStyle
+	titleTextStyle,
+	formatDateFullMonthProper
 } from "./common/certStyles";
 
 
