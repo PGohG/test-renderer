@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { approvedAddresses } from "../common";
 import ITECert from "./certificate";
 import ITETranscript from "../common/transcript";
-import ITEMedia from "../common/media";
+import ITEMedia from "./media";
 
 const templates = [
   {
