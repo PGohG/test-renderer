@@ -312,6 +312,7 @@ export const formatDateFullMonthProper = dateString => {
   return tz(date, TIMEZONE).format("D MMMM YYYY");
 };
 
+{/*
 export const renderCertDescr = certificate => (
   <div>
     <p>
@@ -371,7 +372,108 @@ export const renderCertDescr = certificate => (
     </div>
   </div>
 );
+*/}
+export const renderFullCertAwardText = document => (
+  <div>
+    <div
+      className="row d-flex justify-content-center"
+      style={{ marginTop: "10rem" }}
+    >
+      <span style={arial16Pt}>It is hereby certified that</span>
+    </div>
+    <div className="ml-3">
+      <div className="mr-3">
+        <div className="row d-flex justify-content-center">
+          <span style={timesNewRoman32Pt}>{document.recipient.name}</span>
+        </div>
+      </div>{" "}
+    </div>
+    <div className="row d-flex justify-content-center">
+      <span style={arial10Pt}>
+        __________________________________________________________________________________________
+      </span>
+    </div>
+    <p>
+      <br />
+    </p>
+    <div className="row d-flex justify-content-center">
+      <span style={arial16Pt}>
+        having successfully completed the programmes of study
+      </span>
+    </div>
+    <div className="row d-flex justify-content-center">
+      <span style={arial16Pt}>and passed the prescribed examinations</span>
+    </div>
+    <div className="row d-flex justify-content-center">
+      <span style={arial16Pt}>was awarded the</span>
+    </div>
 
+    {renderCertDescr(document)}
+  </div>
+);
+
+export const renderCertDescr = document => (
+  <div>
+    <p>
+      <br />
+    </p>
+    <div className="ml-5">
+      <div className="mr-5">
+        <div className="row d-flex justify-content-center">
+          <span style={timesNewRoman32Pt}>
+            <p style={timesNewRoman32Pt}>{document.description}</p>
+          </span>
+        </div>
+      </div>{" "}
+    </div>
+    <div className="ml-5">
+      <div className="mr-5">
+        <div className="row d-flex justify-content-center">
+          {!document.description.includes(" in ") && (
+            <span style={timesNewRoman32Pt}>
+              <p style={timesNewRoman32Pt}>in</p>
+            </span>
+          )}
+        </div>
+      </div>{" "}
+    </div>
+    <div className="ml-5">
+      <div className="mr-5">
+        <div className="row d-flex justify-content-center">
+          <span style={timesNewRoman32Pt}>
+            <p style={timesNewRoman32Pt}>
+              {document.additionalData.courseDescription}
+            </p>
+          </span>
+        </div>
+      </div>{" "}
+    </div>
+    <div className="ml-5">
+      <div className="mr-5">
+        <div className="row d-flex justify-content-center">
+          <span style={timesNewRoman32Pt}>
+            <p style={timesNewRoman32Pt}>
+              {document.additionalData.courseSpecialisation}
+            </p>
+          </span>
+        </div>
+      </div>{" "}
+    </div>
+    <div className="row d-flex justify-content-center">
+      <span style={arial16Pt}>on</span>
+    </div>
+    <div className="row d-flex justify-content-center">
+      <span style={timesNewRoman32Pt}>
+        <p style={timesNewRoman32Pt}>
+          {formatDateFullMonthProper(document.graduationDate)}
+        </p>
+      </span>
+    </div>
+  </div>
+);
+
+
+{/*
 export const renderFullCertAwardText = certificate => (
   <div>
     <div
@@ -410,6 +512,7 @@ export const renderFullCertAwardText = certificate => (
     {renderCertDescr(certificate)}
   </div>
 );
+*/}
 
 export const renderCOMAwardText = certificate => (
   <div>

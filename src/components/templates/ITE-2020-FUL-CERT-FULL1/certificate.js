@@ -121,6 +121,10 @@ const formatDateFullMonthProper = dateString => {
   return tz(date, TIMEZONE).format("D MMMM YYYY");
 };
 
+import {
+  renderFullCertAwardText
+} from "./common/certDetails";
+
 {/*
 import {
   renderLogoITE,
@@ -152,7 +156,10 @@ const Template = ({ document }) => (
 	      <div className="col-1" />
 	    </div>
 
+		{renderFullCertAwardText(document)}
+
       {/* renderFullCertAwardText(certificate)*/}
+      {/*
 		<div
 		  className="row d-flex justify-content-center"
 		  style={{ marginTop: "10rem" }}
