@@ -121,7 +121,7 @@ const formatDateFullMonthProper = dateString => {
   return tz(date, TIMEZONE).format("D MMMM YYYY");
 };
 
-const renderSignatory = (document, count, certnbr, separ, stdid) => (
+const renderSignatory = (doc, count, certnbr, separ, stdid) => (
   <div
     className="col-4 justify-content-center"
     style={{ marginTop: "4rem", marginBottom: "0" }}
@@ -129,18 +129,14 @@ const renderSignatory = (document, count, certnbr, separ, stdid) => (
     <div className="px-4">
       <img
         style={fullWidthStyle}
-        src={get(
-          document,
-          `additionalData.certSignatories[${count}].signature`
+        src={get(doc,`additionalData.certSignatories[${count}].signature`
         )}
       />
     </div>
     <div className="text-center">
       <strong>
         <p style={arial10Pt}>
-          {get(
-            document,
-            `additionalData.certSignatories[${count}].designation`
+          {get(doc,`additionalData.certSignatories[${count}].designation`
           )}
         </p>
       </strong>
@@ -302,18 +298,11 @@ const Template = ({ document }) => (
 	      </div>
 
 	      {renderSignatory(document, 0, "", "", "")}
-	      {renderSignatory(
-	        document,
-	        1,
-	        document.id,
-	        "/",
-	        document.recipient.studentId
-	      )}
+	      {renderSignatory(document, 1, document.id, "/", document.recipient.studentId)}
 	    </div>
 
       {/*
       {renderITEFooter(certificate)}
-      */}
 
 	    <div className="container">
 	      <div
@@ -334,6 +323,7 @@ const Template = ({ document }) => (
 	        <div className="col-1" />
 	      </div>
 	    </div>
+      */}
 
     </div>
   </div>
