@@ -6,7 +6,7 @@ import {
   IMG_CERT_FULL1_LOGO_ITE,
   IMG_CERT_NIEC1_LOGO_ITE,
   IMG_CERT_NIEC1ITE_LOGO_ITE
-} from "./images";
+} from "./common/images";
 
 
 {/*
