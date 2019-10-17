@@ -1,5 +1,5 @@
 export * from "./images";
-export { default as Certificate } from "./certDetails";
+export { default as Certificate } from "./certificate";
 
 export const approvedAddresses = [
   "0xE5c693015460868F817799CAFb363EEDb4F9E446", // ROPSTEN: ITE
