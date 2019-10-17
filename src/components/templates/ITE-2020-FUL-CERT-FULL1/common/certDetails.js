@@ -129,7 +129,7 @@ export const renderCertDescr = doc => (
       </div>{" "}
     </div>
     <div className="row d-flex justify-content-center">
-      <span style={arial16Pt}>on*</span>
+      <span style={arial16Pt}>on</span>
     </div>
     <div className="row d-flex justify-content-center">
       <span style={timesNewRoman32Pt}>
@@ -141,6 +141,77 @@ export const renderCertDescr = doc => (
   </div>
 );
 
+export const renderTwoSignatures = doc => (
+  <div
+    className="row d-flex justify-content-center"
+    style={{ marginTop: "8rem", marginBottom: "1rem" }}
+  >
+    <div className="col-4 justify-content-center">
+      <div className="row justify-content-center align-items-center">
+        <img style={threeqartWidthStyle} src={IMG_CERTIFICATE_SEAL} />
+      </div>
+    </div>
+
+    {renderSignatory(doc, 0, "", "", "")}
+    {renderSignatory(doc, 1, doc.id, "/", doc.recipient.studentId
+    )}
+  </div>
+);
+
+export const renderSignatory = (doc, count, certnbr, separ, stdid) => (
+  <div
+    className="col-4 justify-content-center"
+    style={{ marginTop: "4rem", marginBottom: "0" }}
+  >
+    <div className="px-4">
+      <img
+        style={fullWidthStyle}
+        src={get(doc, `additionalData.certSignatories[${count}].signature`)}
+      />
+    </div>
+    <div className="text-center">
+      <strong>
+        <p style={arial10Pt}>
+          {get(doc, `additionalData.certSignatories[${count}].designation`)}
+        </p>
+      </strong>
+    </div>
+    <p>
+      <br />
+    </p>
+    <div className="text-center">
+      <strong>
+        <p style={timesNewRoman24Pt}>
+          {certnbr}
+          {separ}
+          {stdid}
+        </p>
+      </strong>
+    </div>
+  </div>
+);
+
+export const renderITEFooter = doc => (
+  <div className="container">
+    <div
+      className="row d-flex justify-content-start align-items-start"
+      style={{ marginTop: "1rem" }}
+    >
+      <div className="col-1" />
+      <div className="col-10 text-left">
+        <p style={arial5Pt}>{doc.additionalData.footnoteLine1}</p>
+        <div className="ml-3">
+          <div className="pl-4">
+            <p style={arial5Pt}>{doc.additionalData.footnoteLine2}</p>
+          </div>
+        </div>
+        <br />
+        <br />
+      </div>
+      <div className="col-1" />
+    </div>
+  </div>
+);
 
 {/*
 export const renderCOM = () => (
@@ -169,88 +240,7 @@ export const renderLogoITEandPartner = () => (
   </div>
 );
 
-export const renderSignatory = (certificate, count, certnbr, separ, stdid) => (
-  <div
-    className="col-4 justify-content-center"
-    style={{ marginTop: "4rem", marginBottom: "0" }}
-  >
-    <div className="px-4">
-      <img
-        style={fullWidthStyle}
-        src={get(
-          certificate,
-          `additionalData.certSignatories[${count}].signature`
-        )}
-      />
-    </div>
-    <div className="text-center">
-      <strong>
-        <p style={arial10Pt}>
-          {get(
-            certificate,
-            `additionalData.certSignatories[${count}].designation`
-          )}
-        </p>
-      </strong>
-    </div>
-    <p>
-      <br />
-    </p>
-    <div className="text-center">
-      <strong>
-        <p style={timesNewRoman24Pt}>
-          {certnbr}
-          {separ}
-          {stdid}
-        </p>
-      </strong>
-    </div>
-  </div>
-);
 
-export const renderTwoSignatures = certificate => (
-  <div
-    className="row d-flex justify-content-center"
-    style={{ marginTop: "8rem", marginBottom: "1rem" }}
-  >
-    <div className="col-4 justify-content-center">
-      <div className="row justify-content-center align-items-center">
-        <img style={threeqartWidthStyle} src={IMG_CERTIFICATE_SEAL} />
-      </div>
-    </div>
-
-    {renderSignatory(certificate, 0, "", "", "")}
-    {renderSignatory(
-      certificate,
-      1,
-      certificate.id,
-      "/",
-      certificate.recipient.studentId
-    )}
-  </div>
-);
-
-export const renderITEFooter = certificate => (
-  <div className="container">
-    <div
-      className="row d-flex justify-content-start align-items-start"
-      style={{ marginTop: "1rem" }}
-    >
-      <div className="col-1" />
-      <div className="col-10 text-left">
-        <p style={arial5Pt}>{certificate.additionalData.footnoteLine1}</p>
-        <div className="ml-3">
-          <div className="pl-4">
-            <p style={arial5Pt}>{certificate.additionalData.footnoteLine2}</p>
-          </div>
-        </div>
-        <br />
-        <br />
-      </div>
-      <div className="col-1" />
-    </div>
-  </div>
-);
 
 export const renderTwoNiecSignatures = certificate => (
   <div
