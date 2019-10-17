@@ -55,15 +55,15 @@ const SubjectGrades = ({ doc }) => {
       <div key={j}>
         {semesterHeader(s)}
         {semesterSubjects}
+
+		  <div className="row">
+			<div className="col-2"> ***** </div>
+		  </div>
+
         <br />
       </div>
     );
   });
-
-  <div className="row">
-	<div className="semester-header exemption col-12"> ***** </div>
-  </div>
-
 
   return <div>{subjects}</div>;
 };
