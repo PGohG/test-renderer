@@ -17,7 +17,7 @@ const Recipient = ({ doc }) => (
       <div className="col-5">
         <div className="row">
           <div className="col-5">IDENTIFICATION NO:</div>
-          <div className="col-5">{doc.recipient.nric}</div>
+          <div className="col-5">{doc.recipient.studentId}</div>
         </div>
       </div>
     </div>
