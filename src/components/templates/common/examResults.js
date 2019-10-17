@@ -41,13 +41,12 @@ const ExamResults = ({ doc }) => (
 		  <br />
       </div>
 
- 		if ({doc.additionalData.transcriptData.awardStatement}) { (
+ 		if ({doc.additionalData.transcriptData.awardStatement}) {
 			  <div className="col-2"> <strong>AWARD:</strong> </div>
 			  <div className="col-10"> <strong>{doc.additionalData.transcriptData.awardStatement}</strong>
 				  <br />
 				  <br />
-			  </div>\
-			  );
+			  </div>
 	    }
 
 		if ({doc.additionalData.transcriptData.napfaField}) {
