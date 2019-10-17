@@ -1,6 +1,14 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { get } from "lodash";
+import {
+	formatDateFullMonthProper,
+	renderLogoITE,
+	renderFullCertAwardText,
+	renderCertDescr,
+	renderTwoSignatures,
+	renderITEFooter
+} from "../common/certDetails";
 
 {/*
 import {
@@ -19,14 +27,6 @@ import {
 } from "./common/certStyles";
 */}
 
-import {
-	formatDateFullMonthProper,
-	renderLogoITE,
-	renderFullCertAwardText,
-	renderCertDescr,
-	renderTwoSignatures,
-	renderITEFooter
-} from "../common/certDetails";
 
 
 const Template = ({ document }) => (
