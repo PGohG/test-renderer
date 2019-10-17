@@ -41,6 +41,107 @@ export const renderLogoITE = () => (
   </div>
 );
 
+
+export const renderFullCertAwardText = doc => (
+  <div>
+    <div
+      className="row d-flex justify-content-center"
+      style={{ marginTop: "10rem" }}
+    >
+      <span style={arial16Pt}>It is hereby certified that</span>
+    </div>
+    <div className="ml-3">
+      <div className="mr-3">
+        <div className="row d-flex justify-content-center">
+          <span style={timesNewRoman32Pt}>{doc.recipient.name}</span>
+        </div>
+      </div>{" "}
+    </div>
+    <div className="row d-flex justify-content-center">
+      <span style={arial10Pt}>
+        __________________________________________________________________________________________
+      </span>
+    </div>
+    <p>
+      <br />
+    </p>
+    <div className="row d-flex justify-content-center">
+      <span style={arial16Pt}>
+        having successfully completed the programmes of study
+      </span>
+    </div>
+    <div className="row d-flex justify-content-center">
+      <span style={arial16Pt}>and passed the prescribed examinations</span>
+    </div>
+    <div className="row d-flex justify-content-center">
+      <span style={arial16Pt}>was awarded the</span>
+    </div>
+
+    {renderCertDescr(doc)}
+   </div>
+);
+
+export const renderCertDescr = doc => (
+  <div>
+    <p>
+      <br />
+    </p>
+    <div className="ml-5">
+      <div className="mr-5">
+        <div className="row d-flex justify-content-center">
+          <span style={timesNewRoman32Pt}>
+            <p style={timesNewRoman32Pt}>{doc.description}</p>
+          </span>
+        </div>
+      </div>{" "}
+    </div>
+    <div className="ml-5">
+      <div className="mr-5">
+        <div className="row d-flex justify-content-center">
+          {!doc.description.includes(" in ") && (
+            <span style={timesNewRoman32Pt}>
+              <p style={timesNewRoman32Pt}>in</p>
+            </span>
+          )}
+        </div>
+      </div>{" "}
+    </div>
+    <div className="ml-5">
+      <div className="mr-5">
+        <div className="row d-flex justify-content-center">
+          <span style={timesNewRoman32Pt}>
+            <p style={timesNewRoman32Pt}>
+              {doc.additionalData.courseDescription}
+            </p>
+          </span>
+        </div>
+      </div>{" "}
+    </div>
+    <div className="ml-5">
+      <div className="mr-5">
+        <div className="row d-flex justify-content-center">
+          <span style={timesNewRoman32Pt}>
+            <p style={timesNewRoman32Pt}>
+              {doc.additionalData.courseSpecialisation}
+            </p>
+          </span>
+        </div>
+      </div>{" "}
+    </div>
+    <div className="row d-flex justify-content-center">
+      <span style={arial16Pt}>on</span>
+    </div>
+    <div className="row d-flex justify-content-center">
+      <span style={timesNewRoman32Pt}>
+        <p style={timesNewRoman32Pt}>
+          {formatDateFullMonthProper(doc.graduationDate)}
+        </p>
+      </span>
+    </div>
+  </div>
+);
+
+
 {/*
 export const renderCOM = () => (
   <div
@@ -242,104 +343,6 @@ export const renderTwoNiecSignatures = certificate => (
   </div>
 );
 
-export const renderCertDescr = certificate => (
-  <div>
-    <p>
-      <br />
-    </p>
-    <div className="ml-5">
-      <div className="mr-5">
-        <div className="row d-flex justify-content-center">
-          <span style={timesNewRoman32Pt}>
-            <p style={timesNewRoman32Pt}>{certificate.description}</p>
-          </span>
-        </div>
-      </div>{" "}
-    </div>
-    <div className="ml-5">
-      <div className="mr-5">
-        <div className="row d-flex justify-content-center">
-          {!certificate.description.includes(" in ") && (
-            <span style={timesNewRoman32Pt}>
-              <p style={timesNewRoman32Pt}>in</p>
-            </span>
-          )}
-        </div>
-      </div>{" "}
-    </div>
-    <div className="ml-5">
-      <div className="mr-5">
-        <div className="row d-flex justify-content-center">
-          <span style={timesNewRoman32Pt}>
-            <p style={timesNewRoman32Pt}>
-              {certificate.additionalData.courseDescription}
-            </p>
-          </span>
-        </div>
-      </div>{" "}
-    </div>
-    <div className="ml-5">
-      <div className="mr-5">
-        <div className="row d-flex justify-content-center">
-          <span style={timesNewRoman32Pt}>
-            <p style={timesNewRoman32Pt}>
-              {certificate.additionalData.courseSpecialisation}
-            </p>
-          </span>
-        </div>
-      </div>{" "}
-    </div>
-    <div className="row d-flex justify-content-center">
-      <span style={arial16Pt}>on</span>
-    </div>
-    <div className="row d-flex justify-content-center">
-      <span style={timesNewRoman32Pt}>
-        <p style={timesNewRoman32Pt}>
-          {formatDateFullMonthProper(certificate.graduationDate)}
-        </p>
-      </span>
-    </div>
-  </div>
-);
-
-export const renderFullCertAwardText = document => (
-  <div>
-    <div
-      className="row d-flex justify-content-center"
-      style={{ marginTop: "10rem" }}
-    >
-      <span style={arial16Pt}>It is hereby certified that</span>
-    </div>
-    <div className="ml-3">
-      <div className="mr-3">
-        <div className="row d-flex justify-content-center">
-          <span style={timesNewRoman32Pt}>{document.recipient.name}</span>
-        </div>
-      </div>{" "}
-    </div>
-    <div className="row d-flex justify-content-center">
-      <span style={arial10Pt}>
-        __________________________________________________________________________________________
-      </span>
-    </div>
-    <p>
-      <br />
-    </p>
-    <div className="row d-flex justify-content-center">
-      <span style={arial16Pt}>
-        having successfully completed the programmes of study
-      </span>
-    </div>
-    <div className="row d-flex justify-content-center">
-      <span style={arial16Pt}>and passed the prescribed examinations</span>
-    </div>
-    <div className="row d-flex justify-content-center">
-      <span style={arial16Pt}>was awarded the</span>
-    </div>
-
-    {renderCertDescr(document)}
-   </div>
-);
 
 export const renderCertDescr = document => (
   <div>

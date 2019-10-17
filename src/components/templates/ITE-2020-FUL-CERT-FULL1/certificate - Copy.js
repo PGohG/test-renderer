@@ -24,11 +24,105 @@ import {
 
 import {
 	formatDateFullMonthProper,
-	renderLogoITE,
-	renderFullCertAwardText,
-	renderCertDescr
+	renderLogoITE
 } from "./common/certDetails";
 
+{/*
+const TIMEZONE = "Asia/Singapore";
+
+const fullWidthStyle = {
+  width: "100%",
+  height: "auto"
+};
+
+const halfWidthStyle = {
+  width: "55%",
+  height: "auto"
+};
+
+const threeqartWidthStyle = {
+  width: "75%",
+  height: "auto"
+};
+
+const arial16Pt = {
+  fontFamily: "Arial",
+  fontSize: "24px",
+  textAlign: "center"
+};
+
+const arial10Pt = {
+  fontFamily: "Arial",
+  fontSize: "16px",
+  textAlign: "center",
+  marginTop: "0",
+  marginBottom: "0",
+  marginLeft: "0",
+  marginRight: "0"
+};
+
+const arial5Pt = {
+  fontFamily: "Arial",
+  fontSize: "15px",
+  textAlign: "start",
+  marginTop: "0",
+  marginBottom: "0"
+};
+
+const timesNewRoman24Pt = {
+  fontFamily: "Times New Roman",
+  fontSize: "16px",
+  fontWeight: "bold",
+  textAlign: "center",
+  color: "black",
+  marginTop: "0",
+  marginBottom: "0"
+};
+
+const timesNewRoman32Pt = {
+  fontFamily: "Times New Roman",
+  fontSize: "42px",
+  fontStyle: "italic",
+  fontWeight: "bold",
+  textAlign: "center",
+  color: "black",
+  marginTop: "0",
+  marginBottom: "0"
+};
+
+const printTextStyle = {
+  fontFamily: "TimesNewRoman",
+  fontStyle: "Italic",
+  fontWeight: "500!important",
+  fontSize: "1.2rem",
+  color: "#555",
+  textAlign: "center"
+};
+
+const COMTextStyle = {
+  fontFamily: "Arial",
+  color: "#111",
+  fontSize: "5.0rem",
+  fontWeight: "bold"
+};
+
+const nameTextStyle = {
+  fontSize: "3rem",
+  textAlign: "center"
+};
+
+const titleTextStyle = {
+  color: "rgb(30,93,200)",
+  fontSize: "3rem",
+  textAlign: "center"
+};
+
+const formatDateFullMonthProper = dateString => {
+  if (!dateString) return null;
+  const date = new Date(dateString);
+  return tz(date, TIMEZONE).format("D MMMM YYYY");
+};
+*/}
 
 const renderSignatory = (doc, count, certnbr, separ, stdid) => (
   <div
@@ -78,20 +172,29 @@ import {
 
 const Template = ({ document }) => (
   <div>
-	<div
-	className="container"
-	style={{ border: 5, borderColor: "#AAA", borderStyle: "solid" }}
-	>
-		<p>
-		<br />
-		<br />
-		</p>
+    <div
+      className="container"
+      style={{ border: 5, borderColor: "#AAA", borderStyle: "solid" }}
+    >
+      <p>
+        <br />
+        <br />
+      </p>
 
-		{renderLogoITE()}
-		{renderFullCertAwardText(document)}
+      {renderLogoITE()}
 
-{/*
-		{renderFullCertAwardText(certificate)}
+      {/*
+      {renderLogoITE()}
+	    <div className="row d-flex justify-content-center">
+	      <div className="col-1" />
+	      <div className="col-10">
+	        <img style={halfWidthStyle} src={IMG_CERT_FULL1_LOGO_ITE} />
+	      </div>
+	      <div className="col-1" />
+	    </div>
+      */}
+
+      {/* renderFullCertAwardText(certificate)*/}
 	  <div>
 		<div
 		  className="row d-flex justify-content-center"
@@ -126,7 +229,7 @@ const Template = ({ document }) => (
 		  <span style={arial16Pt}>was awarded the</span>
 		</div>
 
-		{renderCertDescr(certificate)}
+		{/*renderCertDescr(certificate)*/}
 		  <div>
 			<p>
 			  <br />
@@ -185,7 +288,6 @@ const Template = ({ document }) => (
 			</div>
 		  </div>
 	  </div>
-    */}
 
       {/*
       {renderTwoSignatures(certificate)}
