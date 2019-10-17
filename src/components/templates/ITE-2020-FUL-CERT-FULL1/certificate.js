@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { get } from "lodash";
 
-
+{/*
 import {
 	fullWidthStyle,
 	halfWidthStyle,
@@ -17,6 +17,7 @@ import {
 	nameTextStyle,
 	titleTextStyle
 } from "./common/certStyles";
+*/}
 
 import {
 	formatDateFullMonthProper,
@@ -25,17 +26,7 @@ import {
 	renderCertDescr,
 	renderTwoSignatures,
 	renderITEFooter
-} from "./common/certDetails";
-
-
-{/*
-import {
-  renderLogoITE,
-  renderFullCertAwardText,
-  renderTwoSignatures,
-  renderITEFooter
-} from "./common/certDetails";
-*/}
+} from "../common/certDetails";
 
 
 const Template = ({ document }) => (
@@ -54,31 +45,7 @@ const Template = ({ document }) => (
 		{renderTwoSignatures(document)}
 		{renderITEFooter(document)}
 
-      {/*
-      {renderITEFooter(certificate)}
-
-	    <div className="container">
-	      <div
-	        className="row d-flex justify-content-start align-items-start"
-	        style={{ marginTop: "1rem" }}
-	      >
-	        <div className="col-1" />
-	        <div className="col-10 text-left">
-	          <p style={arial5Pt}>{document.additionalData.footnoteLine1}</p>
-	          <div className="ml-3">
-	            <div className="pl-4">
-	              <p style={arial5Pt}>{document.additionalData.footnoteLine2}</p>
-	            </div>
-	          </div>
-	          <br />
-	          <br />
-	        </div>
-	        <div className="col-1" />
-	      </div>
-	    </div>
-     */}
-
-    </div>
+     </div>
   </div>
 );
 
