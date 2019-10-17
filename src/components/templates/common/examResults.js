@@ -41,26 +41,38 @@ const ExamResults = ({ doc }) => (
       <br />
       </div>
 
-      <div className="col-2"><strong>AWARD:</strong></div>
-      <div className="col-10"><strong>{doc.additionalData.transcriptData.awardStatement}</strong>
-      <br />
-      <br />
-      </div>
+ 		if (doc.additionalData.transcriptData.awardStatement) {
+			return (
+			  <div className="col-2"><strong>AWARD:</strong></div>
+			  <div className="col-10"><strong>{doc.additionalData.transcriptData.awardStatement}</strong>
+			  <br />
+			  <br />
+			  </div>
+			);
+	    }
 
-      <div className="col-4"><strong>NATIONAL PHYSICAL FITNESS AWARD:</strong></div>
-      <div className="col-8"><strong>{doc.additionalData.transcriptData.napfaStatement}</strong>
-      <br />
-      <br />
-      </div>
+		if (doc.additionalData.transcriptData.napfaField) {
+			return (
+			  <div className="col-4"><strong>{doc.additionalData.transcriptData.napfaField}:</strong></div>
+			  <div className="col-8"><strong>{doc.additionalData.transcriptData.napfaStatement}</strong>
+			  <br />
+			  <br />
+			  </div>
+ 			);
+ 	    }
 
-      <div className="col-4"><strong>CO-CURRICULAR ACTIVITIES GRADE:</strong></div>
-      <div className="col-8"><strong>{doc.additionalData.transcriptData.ccaGrade}</strong></div>
-      <div className="col-8"><strong>{doc.additionalData.transcriptData.ccaAdvantage}</strong>
-      <br />
-      <br />
-      </div>
+		if (doc.additionalData.transcriptData.ccaGrade) {
+			return (
+			  <div className="col-4"><strong>CO-CURRICULAR ACTIVITIES GRADE:</strong></div>
+			  <div className="col-8"><strong>{doc.additionalData.transcriptData.ccaGrade}</strong></div>
+			  <div className="col-8"><strong>{doc.additionalData.transcriptData.ccaAdvantage}</strong>
+			  <br />
+			  <br />
+			  </div>
+ 			);
+ 	    }
+
     </div>
-
     <br />
   </div>
 );

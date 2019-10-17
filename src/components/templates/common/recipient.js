@@ -39,7 +39,7 @@ const Recipient = ({ doc }) => (
 
     <div className="row">
       <div className="col-12">
-        COLLEGE : &nbsp; {doc.additionalData.transcriptData.institution}
+   	   {doc.additionalData.transcriptData.institutionField}: &nbsp; {doc.additionalData.transcriptData.institution}
         <br />
       </div>
     </div>
