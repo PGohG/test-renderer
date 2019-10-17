@@ -47,22 +47,18 @@ const ExamResults = ({ doc }) => (
 		  <br />
 	  </div>
 
-		if ({doc.additionalData.transcriptData.napfaField}) {
-			  <div className="col-4"> <strong>{doc.additionalData.transcriptData.napfaField}:</strong> </div>
-			  <div className="col-8"> <strong>{doc.additionalData.transcriptData.napfaStatement}</strong>
-				  <br />
-				  <br />
-			  </div>
- 	    }
+	  <div className="col-4"> <strong>{doc.additionalData.transcriptData.napfaField}:</strong> </div>
+	  <div className="col-8"> <strong>{doc.additionalData.transcriptData.napfaStatement}</strong>
+		  <br />
+		  <br />
+	  </div>
 
-		if ({doc.additionalData.transcriptData.ccaGrade}) {
-			  <div className="col-4"> <strong>CO-CURRICULAR ACTIVITIES GRADE:</strong> </div>
-			  <div className="col-8"> <strong>{doc.additionalData.transcriptData.ccaGrade}</strong> </div>
-			  <div className="col-8"> <strong>{doc.additionalData.transcriptData.ccaAdvantage}</strong>
-				  <br />
-				  <br />
-			  </div>
- 	    }
+	  <div className="col-4"> <strong>CO-CURRICULAR ACTIVITIES GRADE:</strong> </div>
+	  <div className="col-8"> <strong>{doc.additionalData.transcriptData.ccaGrade}</strong> </div>
+	  <div className="col-8"> <strong>{doc.additionalData.transcriptData.ccaAdvantage}</strong>
+		  <br />
+		  <br />
+	  </div>
 
     </div>
     <br />
