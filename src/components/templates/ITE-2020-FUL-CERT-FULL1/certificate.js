@@ -10,7 +10,6 @@ import {
   IMG_CERT_NIEC1ITE_LOGO_ITE
 } from "./common/images";
 
-{/*
 import {
 	fullWidthStyle,
 	halfWidthStyle,
@@ -25,10 +24,11 @@ import {
 	nameTextStyle,
 	titleTextStyle
 } from "./common/certStyles";
-*/}
+
 
 const TIMEZONE = "Asia/Singapore";
 
+{/*
 const fullWidthStyle = {
   width: "100%",
   height: "auto"
@@ -115,6 +115,7 @@ const titleTextStyle = {
   fontSize: "3rem",
   textAlign: "center"
 };
+*/}
 
 const formatDateFullMonthProper = dateString => {
   if (!dateString) return null;

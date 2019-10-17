@@ -1,6 +1,5 @@
 import { get } from "lodash";
 import React from "react";
-import { tz } from "moment-timezone";
 
 export const TIMEZONE = "Asia/Singapore";
 
