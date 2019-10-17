@@ -2,19 +2,22 @@ import PropTypes from "prop-types";
 import React from "react";
 import RecipientAddress from "./recipientAddress";
 
-const Recipient = ({ certificate }) => (
+const Recipient = ({ doc }) => (
   <div className="container">
     <div className="row">
       <div className="col-7">
-        NAME : &nbsp; <strong>{certificate.recipient.name}</strong>
+        NAME : &nbsp; <strong>{doc.recipient.name}</strong>
         <br />
-        <RecipientAddress certificate={certificate} />
+
+        {/*
+        <RecipientAddress certificate={doc} />
+        */}
       </div>
 
       <div className="col-5">
         <div className="row">
           <div className="col-5">IDENTIFICATION NO:</div>
-          <div className="col-5">{certificate.recipient.nric}</div>
+          <div className="col-5">{doc.recipient.nric}</div>
         </div>
 
         {/*
@@ -45,27 +48,27 @@ const Recipient = ({ certificate }) => (
 
     <div className="row">
       <div className="col-12">
-        ACADEMIC CAREER : &nbsp; {certificate.additionalData.transcriptData.career}
+        ACADEMIC CAREER : &nbsp; {doc.additionalData.transcriptData.career}
         <br />
       </div>
     </div>
 
     <div className="row">
       <div className="col-12	">
-        PROGRAMME : &nbsp; {certificate.additionalData.transcriptData.programName}
+        PROGRAMME : &nbsp; {doc.additionalData.transcriptData.programName}
       </div>
     </div>
 
     <div className="row">
       <div className="col-12">
-        COLLEGE : &nbsp; {certificate.additionalData.transcriptData.institution}
+        COLLEGE : &nbsp; {doc.additionalData.transcriptData.institution}
         <br />
       </div>
     </div>
 
     <div className="row">
       <div className="col-12">
-      	{certificate.additionalData.transcriptData.graduationField}: &nbsp; {certificate.additionalData.transcriptData.graduationDates}
+      	{doc.additionalData.transcriptData.graduationField}: &nbsp; {certificate.additionalData.transcriptData.graduationDates}
         <br />
       </div>
     </div>
@@ -75,7 +78,7 @@ const Recipient = ({ certificate }) => (
 );
 
 Recipient.propTypes = {
-  certificate: PropTypes.object.isRequired
+  doc: PropTypes.object.isRequired
 };
 
 export default Recipient;

@@ -14,8 +14,8 @@ const Transcript = ({ document }) => (
 
 		<div className="transcript-content">
 			<TranscriptHeader />
-			{/*
 			<Recipient certificate={document} />
+			{/*
 			<ExamResults certificate={document} />
 			<FastGradingScheme />
 			<ExemptionFootNote certificate={document} />
