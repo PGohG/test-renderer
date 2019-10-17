@@ -3,7 +3,7 @@ import React from "react";
 import ExamResultsStyles from "./examResultsStyles";
 import SubjectGrades from "./subjectGrades";
 
-const ExamResults = ({ certificate }) => (
+const ExamResults = ({ doc }) => (
   <div className="container">
     {/* <ExamResultsStyles />
     */}
@@ -20,7 +20,7 @@ const ExamResults = ({ certificate }) => (
 
     </div>
 
-    <SubjectGrades certificate={certificate} />
+    <SubjectGrades doc={doc} />
 
     <br />
 
@@ -30,32 +30,32 @@ const ExamResults = ({ certificate }) => (
       */}
 
       <div className="col-3"><strong>GRADE POINT AVERAGE:</strong></div>
-      <div className="col-9"><strong>{certificate.cumulativeScore.toFixed(2)}</strong>
+      <div className="col-9"><strong>{doc.cumulativeScore.toFixed(2)}</strong>
       <br />
       <br />
       </div>
 
       <div className="col-2"><strong>RESULT:</strong></div>
-      <div className="col-10"><strong>{certificate.additionalData.transcriptData.resultStatement}</strong>
+      <div className="col-10"><strong>{doc.additionalData.transcriptData.resultStatement}</strong>
       <br />
       <br />
       </div>
 
       <div className="col-2"><strong>AWARD:</strong></div>
-      <div className="col-10"><strong>{certificate.additionalData.transcriptData.awardStatement}</strong>
+      <div className="col-10"><strong>{doc.additionalData.transcriptData.awardStatement}</strong>
       <br />
       <br />
       </div>
 
       <div className="col-4"><strong>NATIONAL PHYSICAL FITNESS AWARD:</strong></div>
-      <div className="col-8"><strong>{certificate.additionalData.transcriptData.napfaStatement}</strong>
+      <div className="col-8"><strong>{doc.additionalData.transcriptData.napfaStatement}</strong>
       <br />
       <br />
       </div>
 
       <div className="col-4"><strong>CO-CURRICULAR ACTIVITIES GRADE:</strong></div>
-      <div className="col-8"><strong>{certificate.additionalData.transcriptData.ccaGrade}</strong></div>
-      <div className="col-8"><strong>{certificate.additionalData.transcriptData.ccaAdvantage}</strong>
+      <div className="col-8"><strong>{doc.additionalData.transcriptData.ccaGrade}</strong></div>
+      <div className="col-8"><strong>{doc.additionalData.transcriptData.ccaAdvantage}</strong>
       <br />
       <br />
       </div>
@@ -66,7 +66,7 @@ const ExamResults = ({ certificate }) => (
 );
 
 ExamResults.propTypes = {
-  certificate: PropTypes.object.isRequired
+  doc: PropTypes.object.isRequired
 };
 
 export default ExamResults;

@@ -17,34 +17,14 @@ const formatYM = ymnum => {
 	if (ymnum.endsWith("12")) {	return 'DEC '+  ymnum.substr(0,4); };
 };
 
-const SubjectGrades = ({ certificate }) => {
-  const semesters = _(certificate.transcript)
+const SubjectGrades = ({ doc }) => {
+  const semesters = _(doc.transcript)
     .groupBy(t => t.semester)
     .map((values, key) => ({ semester: key, grades: values }))
     .orderBy(s => s.semester)
     .value();
 
   const semesterHeader = s => {
-	{/*
-    if (s.semester.startsWith("AY")) {
-      const semesterParts = s.semester.split(" ");
-      const acadYear = semesterParts[0];
-      const semesterName = `${semesterParts[1]} ${semesterParts[2]}`;
-
-      return (
-        <div className="row">
-          <div className="semester-header col-2">{acadYear}</div>
-          <div className="semester-header col-10">{semesterName}</div>
-        </div>
-      );
-    }
-    return (
-      <div className="row">
-        <div className="semester-header exemption col-12"><u> {s.semester} EXAM SERIES </u> </div>
-      </div>
-    );
-	*/}
-
     if (s.semester.startsWith("999999")) {
       return (
         <div className="row">
@@ -84,7 +64,7 @@ const SubjectGrades = ({ certificate }) => {
 };
 
 SubjectGrades.propTypes = {
-  certificate: PropTypes.object.isRequired
+  doc: PropTypes.object.isRequired
 };
 
 export default SubjectGrades;

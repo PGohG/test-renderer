@@ -19,28 +19,6 @@ const Recipient = ({ doc }) => (
           <div className="col-5">IDENTIFICATION NO:</div>
           <div className="col-5">{doc.recipient.nric}</div>
         </div>
-
-        {/*
-        <div className="row">
-          <div className="col-5">Admission No.</div>
-          <div className="col-1"> : </div>
-          <div className="col-5">{certificate.recipient.studentId}</div>
-        </div>
-        <div className="row">
-          <div className="col-5">Date of Admission</div>
-          <div className="col-1"> : </div>
-          <div className="col-5">
-            {new Date(certificate.admissionDate).toLocaleDateString("en-SG")}
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-5">Date of Graduation</div>
-          <div className="col-1"> : </div>
-          <div className="col-5">
-            {new Date(certificate.graduationDate).toLocaleDateString("en-SG")}
-          </div>
-        </div>
-        */}
       </div>
     </div>
 
