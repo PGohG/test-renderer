@@ -3,6 +3,21 @@ import React from "react";
 import { tz } from "moment-timezone";
 
 import {
+	fullWidthStyle,
+	halfWidthStyle,
+	threeqartWidthStyle,
+	arial16Pt,
+	arial10Pt,
+	arial5Pt,
+	timesNewRoman24Pt,
+	timesNewRoman32Pt,
+	printTextStyle,
+	COMTextStyle,
+	nameTextStyle,
+	titleTextStyle
+} from "./certStyles";
+
+import {
   IMG_CERT_FULL1_LOGO_ITE,
   IMG_CERT_NIEC1_LOGO_ITE,
   IMG_CERT_NIEC1ITE_LOGO_ITE
