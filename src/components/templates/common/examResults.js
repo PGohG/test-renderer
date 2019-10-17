@@ -41,7 +41,7 @@ const ExamResults = ({ doc }) => (
       <br />
       </div>
 
- 		if (doc.additionalData.transcriptData.awardStatement) {
+ 		if ({doc.additionalData.transcriptData.awardStatement}) {
 			return (
 			  <div className="col-2"><strong>AWARD:</strong></div>
 			  <div className="col-10"><strong>{doc.additionalData.transcriptData.awardStatement}</strong>
@@ -51,7 +51,7 @@ const ExamResults = ({ doc }) => (
 			);
 	    }
 
-		if (doc.additionalData.transcriptData.napfaField) {
+		if ({doc.additionalData.transcriptData.napfaField}) {
 			return (
 			  <div className="col-4"><strong>{doc.additionalData.transcriptData.napfaField}:</strong></div>
 			  <div className="col-8"><strong>{doc.additionalData.transcriptData.napfaStatement}</strong>
@@ -61,7 +61,7 @@ const ExamResults = ({ doc }) => (
  			);
  	    }
 
-		if (doc.additionalData.transcriptData.ccaGrade) {
+		if ({doc.additionalData.transcriptData.ccaGrade}) {
 			return (
 			  <div className="col-4"><strong>CO-CURRICULAR ACTIVITIES GRADE:</strong></div>
 			  <div className="col-8"><strong>{doc.additionalData.transcriptData.ccaGrade}</strong></div>
