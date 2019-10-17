@@ -2,10 +2,6 @@ import PropTypes from "prop-types";
 import React from "react";
 import { get } from "lodash";
 
-import {
-  IMG_CERTIFICATE_SEAL
-} from "./common/images";
-
 
 import {
 	fullWidthStyle,

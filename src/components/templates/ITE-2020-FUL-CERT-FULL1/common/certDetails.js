@@ -20,7 +20,8 @@ import {
 import {
   IMG_CERT_FULL1_LOGO_ITE,
   IMG_CERT_NIEC1_LOGO_ITE,
-  IMG_CERT_NIEC1ITE_LOGO_ITE
+  IMG_CERT_NIEC1ITE_LOGO_ITE,
+  IMG_CERTIFICATE_SEAL,
 } from "./images";
 
 const TIMEZONE = "Asia/Singapore";
