@@ -472,18 +472,16 @@ export const renderCOMAwardText = certificate => (
 
 /* eslint-disable */
 // Disabled eslint as there's no way to add proptypes to an anonymous function like this
-{/*
-export default () => ({ certificate }) => (
+export default () => ({ doc }) => (
   <div>
     <div
       className="container"
       style={{ border: 5, borderColor: "#AAA", borderStyle: "solid" }}
     >
       {renderLogoITE()}
-      {renderAwardText(certificate)}
-      {renderTwoSignatures(certificate)}
-	   {renderITEFooter(certificate)}
+      {renderAwardText(doc)}
+      {renderTwoSignatures(doc)}
+	   {renderITEFooter(doc)}
   </div>
   </div>
 );
-*/}
