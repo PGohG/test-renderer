@@ -60,6 +60,11 @@ const SubjectGrades = ({ doc }) => {
     );
   });
 
+  <div className="row">
+	<div className="semester-header exemption col-12"> ***** </div>
+  </div>
+
+
   return <div>{subjects}</div>;
 };
 

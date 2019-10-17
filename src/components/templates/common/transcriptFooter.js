@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { IMG_SIGN_TP_DIR_AA } from "./images";
+
+//import { IMG_SIGN_TP_DIR_AA } from "./images";
 
 export const fullWidthStyle = {
   width: "100%",
   height: "auto"
 };
 
-const TranscriptFooter = ({ certificate }) => (
+const TranscriptFooter = ({ doc }) => (
   <div className="container">
     <style>
       {`
@@ -39,7 +40,7 @@ const TranscriptFooter = ({ certificate }) => (
       <div className="col-2">
         <div className="issue-date">
 
-          {/*{new Date(certificate.issuedOn).toLocaleDateString("en-SG")}
+          {/*{new Date(doc.issuedOn).toLocaleDateString("en-SG")}
           */}
         </div>
       </div>
@@ -50,7 +51,7 @@ const TranscriptFooter = ({ certificate }) => (
         <div className="signature-container">
 	 	  <img
             style={fullWidthStyle}
-            src={certificate.additionalData.transcriptSignatories[0].signature}
+            src={doc.additionalData.transcriptSignatories[0].signature}
           />
 
         {/*
@@ -59,6 +60,7 @@ const TranscriptFooter = ({ certificate }) => (
         </div>
       </div>
     </div>
+
     <div className="row">
       <div className="col-2">
         <div className="issue-date-label"> </div>
@@ -66,9 +68,9 @@ const TranscriptFooter = ({ certificate }) => (
       <div className="col-8">&nbsp;</div>
       <div className="col-2">
         <div className="signature-container registrar-sign-label">
-          {certificate.additionalData.transcriptSignatories[0].designation}
+          {doc.additionalData.transcriptSignatories[0].designation}
 	    <br />
-          {certificate.additionalData.transcriptData.effectiveDate}
+          {doc.additionalData.transcriptData.effectiveDate}
         </div>
       </div>
     </div>
@@ -79,7 +81,7 @@ const TranscriptFooter = ({ certificate }) => (
 );
 
 TranscriptFooter.propTypes = {
-  certificate: PropTypes.object.isRequired
+  doc: PropTypes.object.isRequired
 };
 
 export default TranscriptFooter;

@@ -18,9 +18,9 @@ const Transcript = ({ document }) => (
 			<ExamResults doc={document} />
 			{/*
 			<FastGradingScheme />
-			<ExemptionFootNote certificate={document} />
-			<TranscriptFooter certificate={document} />
+			<ExemptionFootNote doc={document} />
 			*/}
+			<TranscriptFooter doc={document} />
 		</div>
 	</div>
 );
