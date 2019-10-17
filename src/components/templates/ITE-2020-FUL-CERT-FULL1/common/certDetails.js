@@ -129,7 +129,7 @@ export const renderCertDescr = doc => (
       </div>{" "}
     </div>
     <div className="row d-flex justify-content-center">
-      <span style={arial16Pt}>on</span>
+      <span style={arial16Pt}>on*</span>
     </div>
     <div className="row d-flex justify-content-center">
       <span style={timesNewRoman32Pt}>
