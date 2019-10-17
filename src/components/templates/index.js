@@ -13,6 +13,6 @@ export default {
   default: DefaultTemplate,
   CUSTOM_TEMPLATE: CustomTemplate,
   GOVTECH_DEMO: GovTechDemoCert,
-  ITE-2020-FUL-CERT-FULL1: ITE2020FulCert,
+  ITE_2020_FUL_CERT_FULL1: ITE2020FulCert,
   NULL: []
 };
