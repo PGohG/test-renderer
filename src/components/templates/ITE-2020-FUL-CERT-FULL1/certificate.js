@@ -1,14 +1,11 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { get } from "lodash";
-import { tz } from "moment-timezone";
 
 import {
-  IMG_CERTIFICATE_SEAL,
-  IMG_CERT_FULL1_LOGO_ITE,
-  IMG_CERT_NIEC1_LOGO_ITE,
-  IMG_CERT_NIEC1ITE_LOGO_ITE
+  IMG_CERTIFICATE_SEAL
 } from "./common/images";
+
 
 import {
 	fullWidthStyle,
@@ -25,10 +22,14 @@ import {
 	titleTextStyle
 } from "./common/certStyles";
 
-
-const TIMEZONE = "Asia/Singapore";
+import {
+	formatDateFullMonthProper,
+	renderLogoITE
+} from "./common/certDetails";
 
 {/*
+const TIMEZONE = "Asia/Singapore";
+
 const fullWidthStyle = {
   width: "100%",
   height: "auto"
@@ -115,13 +116,13 @@ const titleTextStyle = {
   fontSize: "3rem",
   textAlign: "center"
 };
-*/}
 
 const formatDateFullMonthProper = dateString => {
   if (!dateString) return null;
   const date = new Date(dateString);
   return tz(date, TIMEZONE).format("D MMMM YYYY");
 };
+*/}
 
 const renderSignatory = (doc, count, certnbr, separ, stdid) => (
   <div
@@ -179,9 +180,11 @@ const Template = ({ document }) => (
         <br />
         <br />
       </p>
+
+      {renderLogoITE()}
+
       {/*
       {renderLogoITE()}
-      */}
 	    <div className="row d-flex justify-content-center">
 	      <div className="col-1" />
 	      <div className="col-10">
@@ -189,6 +192,7 @@ const Template = ({ document }) => (
 	      </div>
 	      <div className="col-1" />
 	    </div>
+      */}
 
       {/* renderFullCertAwardText(certificate)*/}
 	  <div>

@@ -1,110 +1,20 @@
 import { get } from "lodash";
 import React from "react";
 import { tz } from "moment-timezone";
+
 import {
-  IMG_CERTIFICATE_SEAL,
   IMG_CERT_FULL1_LOGO_ITE,
   IMG_CERT_NIEC1_LOGO_ITE,
   IMG_CERT_NIEC1ITE_LOGO_ITE
 } from "./images";
 
-export const TIMEZONE = "Asia/Singapore";
+const TIMEZONE = "Asia/Singapore";
 
-export const fullWidthStyle = {
-  width: "100%",
-  height: "auto"
+export const formatDateFullMonthProper = inDate => {
+  if (!inDate) return null;
+  const outDate = new Date(inDate);
+  return tz(outDate, TIMEZONE).format("D MMMM YYYY");
 };
-
-export const halfWidthStyle = {
-  width: "55%",
-  height: "auto"
-};
-
-export const threeqartWidthStyle = {
-  width: "75%",
-  height: "auto"
-};
-
-export const arial16Pt = {
-  fontFamily: "Arial",
-  fontSize: "24px",
-  textAlign: "center"
-};
-
-export const arial10Pt = {
-  fontFamily: "Arial",
-  fontSize: "16px",
-  textAlign: "center",
-  marginTop: "0",
-  marginBottom: "0",
-  marginLeft: "0",
-  marginRight: "0"
-};
-
-export const arial5Pt = {
-  fontFamily: "Arial",
-  fontSize: "15px",
-  textAlign: "start",
-  marginTop: "0",
-  marginBottom: "0"
-};
-
-export const timesNewRoman24Pt = {
-  fontFamily: "Times New Roman",
-  fontSize: "16px",
-  fontWeight: "bold",
-  textAlign: "center",
-  color: "black",
-  marginTop: "0",
-  marginBottom: "0"
-};
-
-export const timesNewRoman32Pt = {
-  fontFamily: "Times New Roman",
-  fontSize: "42px",
-  fontStyle: "italic",
-  fontWeight: "bold",
-  textAlign: "center",
-  color: "black",
-  marginTop: "0",
-  marginBottom: "0"
-};
-
-export const printTextStyle = {
-  fontFamily: "TimesNewRoman",
-  fontStyle: "Italic",
-  fontWeight: "500!important",
-  fontSize: "1.2rem",
-  color: "#555",
-  textAlign: "center"
-};
-
-export const COMTextStyle = {
-  fontFamily: "Arial",
-  color: "#111",
-  fontSize: "5.0rem",
-  fontWeight: "bold"
-};
-
-export const nameTextStyle = {
-  fontSize: "3rem",
-  textAlign: "center"
-};
-
-export const titleTextStyle = {
-  color: "rgb(30,93,200)",
-  fontSize: "3rem",
-  textAlign: "center"
-};
-
-export const renderCOM = () => (
-  <div
-    className="row d-flex justify-content-center"
-    style={{ marginTop: "6rem" }}
-  >
-    <p style={COMTextStyle}>Certificate of Merit</p>
-  </div>
-);
 
 export const renderLogoITE = () => (
   <div className="row d-flex justify-content-center">
@@ -115,6 +25,17 @@ export const renderLogoITE = () => (
     <div className="col-1" />
   </div>
 );
+
+{/*
+export const renderCOM = () => (
+  <div
+    className="row d-flex justify-content-center"
+    style={{ marginTop: "6rem" }}
+  >
+    <p style={COMTextStyle}>Certificate of Merit</p>
+  </div>
+);
+
 
 export const renderLogoITEandPartner = () => (
   <div
@@ -306,13 +227,6 @@ export const renderTwoNiecSignatures = certificate => (
   </div>
 );
 
-export const formatDateFullMonthProper = dateString => {
-  if (!dateString) return null;
-  const date = new Date(dateString);
-  return tz(date, TIMEZONE).format("D MMMM YYYY");
-};
-
-{/*
 export const renderCertDescr = certificate => (
   <div>
     <p>
