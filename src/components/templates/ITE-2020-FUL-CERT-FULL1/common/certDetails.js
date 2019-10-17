@@ -286,7 +286,6 @@ export const renderCertDescr = certificate => (
     </div>
   </div>
 );
-*/}
 
 export const renderFullCertAwardText = document => (
   <div>
@@ -323,9 +322,8 @@ export const renderFullCertAwardText = document => (
       <span style={arial16Pt}>was awarded the</span>
     </div>
 
-    {/*{renderCertDescr(document)}
-    */}
-  </div>
+    {renderCertDescr(document)}
+   </div>
 );
 
 export const renderCertDescr = document => (
@@ -388,8 +386,6 @@ export const renderCertDescr = document => (
   </div>
 );
 
-
-{/*
 export const renderFullCertAwardText = certificate => (
   <div>
     <div
@@ -428,7 +424,7 @@ export const renderFullCertAwardText = certificate => (
     {renderCertDescr(certificate)}
   </div>
 );
-*/}
+
 
 export const renderCOMAwardText = certificate => (
   <div>
@@ -463,9 +459,11 @@ export const renderCOMAwardText = certificate => (
     {renderCertDescr(certificate)}
   </div>
 );
+*/}
 
 /* eslint-disable */
 // Disabled eslint as there's no way to add proptypes to an anonymous function like this
+{/*
 export default () => ({ certificate }) => (
   <div>
     <div
@@ -479,3 +477,4 @@ export default () => ({ certificate }) => (
   </div>
   </div>
 );
+*/}
