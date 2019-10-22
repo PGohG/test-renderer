@@ -1,6 +1,10 @@
 import PropTypes from "prop-types";
 import React from "react";
 
+import {
+	arial12PtC
+} from "./certStyles";
+
 //import { IMG_SIGN_TP_DIR_AA } from "./images";
 
 export const fullWidthStyle = {
@@ -36,47 +40,58 @@ const TranscriptFooter = ({ doc }) => (
     */}
     <br />
 
-    <div className="row">
-      <div className="col-2">
-        <div className="issue-date">
+ 		{/*
+		  <div className="col-2">
+			<div className="issue-date">
 
-          {/*{new Date(doc.issuedOn).toLocaleDateString("en-SG")}
-          */}
-        </div>
-      </div>
-      <div className="col-8">&nbsp;</div>
+			  {new Date(doc.issuedOn).toLocaleDateString("en-SG")}
+
+			</div>
+		  </div>
+		  <div className="col-8">&nbsp;</div>
 
 
-      <div className="col-2">
-        <div className="signature-container">
-	 	  <img
-            style={fullWidthStyle}
-            src={doc.additionalData.transcriptSignatories[0].signature}
-          />
+		  <div className="col-2">
+			<div className="signature-container">
+			  <img
+				style={fullWidthStyle}
+				src={doc.additionalData.transcriptSignatories[0].signature}
+			  />
 
-        {/*
-          <img src={IMG_SIGN_TP_DIR_AA} className="registrar-sign" />
-          */}
-        </div>
-      </div>
-    </div>
 
-    <div className="row">
-      <div className="col-2">
-        <div className="issue-date-label"> </div>
-      </div>
-      <div className="col-8">&nbsp;</div>
-      <div className="col-2">
-        <div className="signature-container registrar-sign-label">
-          {doc.additionalData.transcriptSignatories[0].designation}
-	    <br />
-          {doc.additionalData.transcriptData.effectiveDate}
-        </div>
-      </div>
-    </div>
+			  <img src={IMG_SIGN_TP_DIR_AA} className="registrar-sign" />
 
-    <br />
-    <br />
+			</div>
+		  </div>
+		</div>
+		*/}
+
+		<div className="row">
+		  <div className="col-8">&nbsp;</div>
+		  <div className="col-4">
+			<div className="signature-container">
+			  <img
+				style={fullWidthStyle}
+				src={doc.additionalData.transcriptSignatories[0].signature}
+			  />
+			</div>
+		  </div>
+ 		  <br />
+ 	    </div>
+
+		<div className="row" style={arial12PtC}>
+		  <div className="col-8">&nbsp;</div>
+		  <div className="col-4">
+			<div className="signature-container registrar-sign-label"> <strong>
+			  {doc.additionalData.transcriptSignatories[0].designation} </strong>
+			   <br />
+			  {doc.additionalData.transcriptData.effectiveDate}
+			</div>
+		  </div>
+		</div>
+
+		<br />
+		<br />
   </div>
 );
 

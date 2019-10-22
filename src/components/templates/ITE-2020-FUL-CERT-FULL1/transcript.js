@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 import React from "react";
-import TranscriptStyles from "./transcriptStyles";
-import TranscriptHeader from "./transcriptHeader";
-import Recipient from "./recipient";
-import ExamResults from "./examResults";
-import FastGradingScheme from "./fastGradingScheme";
-import ExemptionFootNote from "./exemptionFootNote";
-import TranscriptFooter from "./transcriptFooter";
+import TranscriptStyles from "../common/transcriptStyles";
+import TranscriptHeader from "../common/transcriptHeader";
+import Recipient from "../common/recipient";
+import ExamResults from "../common/examResults";
+import FastGradingScheme from "../common/fastGradingScheme";
+import ExemptionFootNote from "../common/exemptionFootNote";
+import TranscriptFooter from "../common/transcriptFooter";
 
 const Transcript = ({ document }) => (
 	<div className="container">

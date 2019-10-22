@@ -2,6 +2,11 @@ import _ from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
 
+import {
+	arial12PtL
+} from "./certStyles";
+
+
 const formatYM = ymnum => {
 	if (ymnum.endsWith("01")) {	return 'JAN '+  ymnum.substr(0,4); };
 	if (ymnum.endsWith("02")) {	return 'FEB '+  ymnum.substr(0,4); };
@@ -27,14 +32,14 @@ const SubjectGrades = ({ doc }) => {
   const semesterHeader = s => {
     if (s.semester.startsWith("999999")) {
       return (
-        <div className="row">
+        <div className="row" style={arial12PtL}>
 	        <div className="semester-header exemption col-12"><u> MODULE(S) EXEMPTED / EARNED CREDITS </u> </div>
         </div>
       );
     }
 	else {
 		return (
-		  <div className="row">
+		  <div className="row" style={arial12PtL}>
 			<div className="semester-header exemption col-12"><u>  {formatYM(s.semester)} EXAM SERIES </u> </div>
 		  </div>
 		);
@@ -43,7 +48,7 @@ const SubjectGrades = ({ doc }) => {
 
   const subjects = semesters.map((s, j) => {
     const semesterSubjects = s.grades.map((t, i) => (
-      <div className="row" key={i}>
+      <div className="row" style={arial12PtL} key={i}>
         <div className="col-2">{t.courseCode}</div>
         <div className="col-6">{t.name}</div>
         <div className="col-2 credit-unit">{t.courseCredit}</div>
@@ -56,7 +61,7 @@ const SubjectGrades = ({ doc }) => {
         {semesterHeader(s)}
         {semesterSubjects}
 
-		  <div className="row">
+		  <div className="row" style={arial12PtL}>
 			<div className="col-2"> ***** </div>
 		  </div>
 

@@ -2,13 +2,13 @@ import _ from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
 
-const ExemptionFootNote = ({ certificate }) => {
+const ExemptionFootNote = ({ doc }) => {
   // important to check for ' #'
   // because some subject may contain legitimate # sign, e.g. Programming with C#
-  const isPartiallyExempted = _(certificate.transcript).some(t =>
+  const isPartiallyExempted = _(doc.transcript).some(t =>
     t.name.endsWith(" #")
   );
-  const isFullyExempted = _(certificate.transcript).some(t =>
+  const isFullyExempted = _(doc.transcript).some(t =>
     t.name.endsWith(" *")
   );
   const hasExemption = isPartiallyExempted || isFullyExempted;
@@ -46,7 +46,7 @@ const ExemptionFootNote = ({ certificate }) => {
 };
 
 ExemptionFootNote.propTypes = {
-  certificate: PropTypes.object.isRequired
+  doc: PropTypes.object.isRequired
 };
 
 export default ExemptionFootNote;

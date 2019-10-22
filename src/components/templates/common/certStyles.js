@@ -24,6 +24,20 @@ export const arial16Pt = {
   textAlign: "center"
 };
 
+export const arial12PtL = {
+  fontFamily: "Arial",
+  fontSize: "18px",
+  textAlign: "left"
+};
+
+
+export const arial12PtC = {
+  fontFamily: "Arial",
+  fontSize: "18px",
+  textAlign: "center"
+};
+
+
 export const arial10Pt = {
   fontFamily: "Arial",
   fontSize: "16px",

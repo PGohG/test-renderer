@@ -4,15 +4,15 @@ const TranscriptStyles = () => (
   <style>
     {`
     .transcript-content {
-      font: 90%/1.6 Helvetica, Arial, sans-serif;
+      font: 90%/3.2 Helvetica, Arial, sans-serif;
       *font-size: 1em;
     }
 
-    .transcriptTP-content {
+/*    .transcriptTP-content {
       font: 90%/1.6 Helvetica, Arial, sans-serif;
       *font-size: 1em;
     }
-
+*/
     .signature-container{
       width:100%;
       float:right;

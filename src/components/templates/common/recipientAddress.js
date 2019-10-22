@@ -1,65 +1,65 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-const RecipientAddress = ({ certificate }) => (
+const RecipientAddress = ({ doc }) => (
   <span>
-    {certificate.additionalData.addressBlockHouseNumber && (
+    {doc.additionalData.addressBlockHouseNumber && (
       <span>
-        {certificate.additionalData.addressBlockHouseNumber}
+        {doc.additionalData.addressBlockHouseNumber}
         &nbsp;
       </span>
     )}
 
-    {certificate.additionalData.addressStreetName1 && (
+    {doc.additionalData.addressStreetName1 && (
       <span>
-        {certificate.additionalData.addressStreetName1}
+        {doc.additionalData.addressStreetName1}
         <br />
       </span>
     )}
 
-    {certificate.additionalData.addressStreetName2 && (
+    {doc.additionalData.addressStreetName2 && (
       <span>
-        {certificate.additionalData.addressStreetName2}
+        {doc.additionalData.addressStreetName2}
         <br />
       </span>
     )}
 
-    {certificate.additionalData.addressStreetName3 && (
+    {doc.additionalData.addressStreetName3 && (
       <span>
-        {certificate.additionalData.addressStreetName3}
+        {doc.additionalData.addressStreetName3}
         <br />
       </span>
     )}
 
-    {certificate.additionalData.addressFloorNumber && (
+    {doc.additionalData.addressFloorNumber && (
       <span>
-        {certificate.additionalData.addressFloorNumber}
+        {doc.additionalData.addressFloorNumber}
         &nbsp;
       </span>
     )}
 
-    {certificate.additionalData.addressUnitNumber && (
+    {doc.additionalData.addressUnitNumber && (
       <span>
-        {certificate.additionalData.addressUnitNumber}
+        {doc.additionalData.addressUnitNumber}
         <br />
       </span>
     )}
 
-    {certificate.additionalData.addressCountry && (
+    {doc.additionalData.addressCountry && (
       <span>
-        {certificate.additionalData.addressCountry}
+        {doc.additionalData.addressCountry}
         &nbsp;
       </span>
     )}
 
-    {certificate.additionalData.addressPostalCode && (
-      <span>{certificate.additionalData.addressPostalCode}</span>
+    {doc.additionalData.addressPostalCode && (
+      <span>{doc.additionalData.addressPostalCode}</span>
     )}
   </span>
 );
 
 RecipientAddress.propTypes = {
-  certificate: PropTypes.object.isRequired
+  doc: PropTypes.object.isRequired
 };
 
 export default RecipientAddress;

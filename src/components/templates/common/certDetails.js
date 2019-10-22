@@ -243,7 +243,7 @@ export const renderLogoITEandPartner = () => (
 
 
 
-export const renderTwoNiecSignatures = certificate => (
+export const renderTwoNiecSignatures = doc => (
   <div
     className="row d-flex justify-content-center"
     style={{ marginTop: "8rem", marginBottom: "0" }}
@@ -261,13 +261,13 @@ export const renderTwoNiecSignatures = certificate => (
       <div className="px-4">
         <img
           style={fullWidthStyle}
-          src={get(certificate, "additionalData.certSignatories[0].signature")}
+          src={get(doc, "additionalData.certSignatories[0].signature")}
         />
       </div>
       <div className="text-center">
         <strong>
           <p style={arial10Pt}>
-            {get(certificate, "additionalData.certSignatories[0].designation")}
+            {get(doc, "additionalData.certSignatories[0].designation")}
           </p>
         </strong>
       </div>
@@ -275,7 +275,7 @@ export const renderTwoNiecSignatures = certificate => (
         <strong>
           <p style={arial10Pt}>
             {get(
-              certificate,
+              doc,
               "additionalData.certSignatories[0].organisation"
             ).substring(0, 21)}
           </p>
@@ -285,7 +285,7 @@ export const renderTwoNiecSignatures = certificate => (
         <strong>
           <p style={arial10Pt}>
             {get(
-              certificate,
+              doc,
               "additionalData.certSignatories[0].organisation"
             ).substring(22, 49)}
           </p>
@@ -303,20 +303,20 @@ export const renderTwoNiecSignatures = certificate => (
       <div className="px-4">
         <img
           style={fullWidthStyle}
-          src={get(certificate, "additionalData.certSignatories[1].signature")}
+          src={get(doc, "additionalData.certSignatories[1].signature")}
         />
       </div>
       <div className="text-center">
         <strong>
           <p style={arial10Pt}>
-            {get(certificate, "additionalData.certSignatories[1].designation")}
+            {get(doc, "additionalData.certSignatories[1].designation")}
           </p>
         </strong>
       </div>
       <div className="text-center">
         <strong>
           <p style={arial10Pt}>
-            {get(certificate, "additionalData.certSignatories[1].organisation")}
+            {get(doc, "additionalData.certSignatories[1].organisation")}
           </p>
         </strong>
       </div>
@@ -326,7 +326,7 @@ export const renderTwoNiecSignatures = certificate => (
       <div className="text-center">
         <strong>
           <p style={timesNewRoman24Pt}>
-            {certificate.id}/{certificate.recipient.studentId}
+            {doc.id}/{doc.recipient.studentId}
           </p>
         </strong>
       </div>
@@ -335,7 +335,7 @@ export const renderTwoNiecSignatures = certificate => (
 );
 
 
-export const renderCertDescr = document => (
+export const renderCertDescr = doc => (
   <div>
     <p>
       <br />
@@ -344,7 +344,7 @@ export const renderCertDescr = document => (
       <div className="mr-5">
         <div className="row d-flex justify-content-center">
           <span style={timesNewRoman32Pt}>
-            <p style={timesNewRoman32Pt}>{document.description}</p>
+            <p style={timesNewRoman32Pt}>{doc.description}</p>
           </span>
         </div>
       </div>{" "}
@@ -352,7 +352,7 @@ export const renderCertDescr = document => (
     <div className="ml-5">
       <div className="mr-5">
         <div className="row d-flex justify-content-center">
-          {!document.description.includes(" in ") && (
+          {!doc.description.includes(" in ") && (
             <span style={timesNewRoman32Pt}>
               <p style={timesNewRoman32Pt}>in</p>
             </span>
@@ -365,7 +365,7 @@ export const renderCertDescr = document => (
         <div className="row d-flex justify-content-center">
           <span style={timesNewRoman32Pt}>
             <p style={timesNewRoman32Pt}>
-              {document.additionalData.courseDescription}
+              {doc.additionalData.courseDescription}
             </p>
           </span>
         </div>
@@ -376,7 +376,7 @@ export const renderCertDescr = document => (
         <div className="row d-flex justify-content-center">
           <span style={timesNewRoman32Pt}>
             <p style={timesNewRoman32Pt}>
-              {document.additionalData.courseSpecialisation}
+              {doc.additionalData.courseSpecialisation}
             </p>
           </span>
         </div>
@@ -388,14 +388,14 @@ export const renderCertDescr = document => (
     <div className="row d-flex justify-content-center">
       <span style={timesNewRoman32Pt}>
         <p style={timesNewRoman32Pt}>
-          {formatDateFullMonthProper(document.graduationDate)}
+          {formatDateFullMonthProper(doc.graduationDate)}
         </p>
       </span>
     </div>
   </div>
 );
 
-export const renderFullCertAwardText = certificate => (
+export const renderFullCertAwardText = doc => (
   <div>
     <div
       className="row d-flex justify-content-center"
@@ -406,7 +406,7 @@ export const renderFullCertAwardText = certificate => (
     <div className="ml-3">
       <div className="mr-3">
         <div className="row d-flex justify-content-center">
-          <span style={timesNewRoman32Pt}>{certificate.recipient.name}</span>
+          <span style={timesNewRoman32Pt}>{doc.recipient.name}</span>
         </div>
       </div>{" "}
     </div>
@@ -430,12 +430,12 @@ export const renderFullCertAwardText = certificate => (
       <span style={arial16Pt}>was awarded the</span>
     </div>
 
-    {renderCertDescr(certificate)}
+    {renderCertDescr(doc)}
   </div>
 );
 
 
-export const renderCOMAwardText = certificate => (
+export const renderCOMAwardText = doc => (
   <div>
     <div
       className="row d-flex justify-content-center"
@@ -446,7 +446,7 @@ export const renderCOMAwardText = certificate => (
     <div className="ml-3">
       <div className="mr-3">
         <div className="row d-flex justify-content-center">
-          <span style={timesNewRoman32Pt}>{certificate.recipient.name}</span>
+          <span style={timesNewRoman32Pt}>{doc.recipient.name}</span>
         </div>
       </div>{" "}
     </div>
@@ -465,7 +465,7 @@ export const renderCOMAwardText = certificate => (
       <span style={arial16Pt}>for Outstanding Performance in the</span>
     </div>
 
-    {renderCertDescr(certificate)}
+    {renderCertDescr(doc)}
   </div>
 );
 */}

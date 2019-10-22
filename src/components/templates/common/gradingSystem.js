@@ -2,8 +2,8 @@ import _ from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
 
-const GradeSys = ({ certificate }) => {
-  const gs = _(certificate.additionalData.gradeSystem)
+const GradeSys = ({ doc }) => {
+  const gs = _(doc.additionalData.gradeSystem)
     .map((values, key) => ({ gradeSeq: key, grade: values }))
     .orderBy(s => s.gradeSeq)
     .value();
@@ -51,7 +51,7 @@ const GradeSys = ({ certificate }) => {
 };
 
 SubjectGrades.propTypes = {
-  certificate: PropTypes.object.isRequired
+  doc: PropTypes.object.isRequired
 };
 
 export default GradeSys;

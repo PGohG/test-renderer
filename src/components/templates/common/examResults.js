@@ -3,12 +3,15 @@ import React from "react";
 import ExamResultsStyles from "./examResultsStyles";
 import SubjectGrades from "./subjectGrades";
 
+import {
+	arial12PtL
+} from "./certStyles";
+
 const ExamResults = ({ doc }) => (
-	<div className="container">
+	<div className="container" style={arial12PtL}>
     {/* <ExamResultsStyles /> */}
 
 		<div className="exam-results-header row">
-
 			<div className="col-2"><strong>MODULE CODE</strong></div>
 			<div className="col-6"><strong>MODULE TITLE</strong></div>
 			<div className="col-2 credit-unit"><strong>CREDIT EARNED</strong></div>
@@ -16,7 +19,6 @@ const ExamResults = ({ doc }) => (
 				<br />
 				<br />
 			</div>
-
 		</div>
 
 		<SubjectGrades doc={doc} />
@@ -27,38 +29,52 @@ const ExamResults = ({ doc }) => (
 			<div className="col-12 exam-results-footer">
 			*/}
 
-			<div className="col-3"><strong>GRADE POINT AVERAGE:</strong></div>
-			<div className="col-9"><strong>{doc.cumulativeScore.toFixed(2)}</strong>
+			<div className="col-3"> <strong> GRADE POINT AVERAGE </strong> </div>
+			<div className="col-9"> <strong> : &nbsp; &nbsp; {doc.cumulativeScore.toFixed(3)} </strong>
 				<br />
 				<br />
 			</div>
 
-		  <div className="col-2"><strong>RESULT:</strong></div>
-		  <div className="col-10"><strong>{doc.additionalData.transcriptData.resultStatement}</strong>
-			  <br />
-			  <br />
-		  </div>
-
-		  <div className="col-2"> <strong>AWARD:</strong> </div>
-		  <div className="col-10"> <strong>{doc.additionalData.transcriptData.awardStatement}</strong>
-			  <br />
+		  <div className="col-2"> <strong> RESULT </strong></div>
+		  <div className="col-10"> <strong> : &nbsp; &nbsp; {doc.additionalData.transcriptData.resultStatement}</strong>
 			  <br />
 		  </div>
+ 	    </div>
 
-		  <div className="col-4"> <strong>{doc.additionalData.transcriptData.napfaField}:</strong> </div>
-		  <div className="col-8"> <strong>{doc.additionalData.transcriptData.napfaStatement}</strong>
+ 	   <div> {doc.additionalData.transcriptData.awardStatement
+		? <div className="row">
+			  <div className="col-2"> <strong> AWARD </strong> </div>
+			  <div className="col-10"> <strong> : &nbsp; &nbsp; {doc.additionalData.transcriptData.napfaStatement} </strong> </div>
 			  <br />
-			  <br />
-		  </div>
+		   </div>
+		: null
+		} </div>
 
-		  <div className="col-4"> <strong>CO-CURRICULAR ACTIVITIES GRADE:</strong> </div>
-		  <div className="col-8"> <strong>{doc.additionalData.transcriptData.ccaGrade}</strong> </div>
-		  <div className="col-8"> <strong>{doc.additionalData.transcriptData.ccaAdvantage}</strong>
+	   <div> {doc.additionalData.transcriptData.napfaField
+		? <div className="row">
+			  <div className="col-4"> <strong> {doc.additionalData.transcriptData.napfaField} </strong> </div>
+			  <div className="col-8"> <strong> : &nbsp; &nbsp; {doc.additionalData.transcriptData.napfaStatement} </strong> </div>
 			  <br />
-			  <br />
-		  </div>
+		   </div>
+		: null
+		} </div>
 
-		</div>
+	   <div> {doc.additionalData.transcriptData.ccaGrade
+		? <div className="row">
+			  <div className="col-4"> <strong> CO-CURRICULAR ACTIVITIES GRADE </strong> </div>
+			  <div className="col-8"> <strong> : &nbsp; &nbsp; {doc.additionalData.transcriptData.ccaGrade} </strong> </div>
+		   </div>
+		: null
+		} </div>
+
+	   <div> {doc.additionalData.transcriptData.ccaAdvantage
+		? <div className="row">
+			  <div className="col-4"> &nbsp; </div>
+			  <div className="col-8"> <strong> &nbsp; &nbsp; &nbsp; {doc.additionalData.transcriptData.ccaAdvantage} </strong> </div>
+		   </div>
+		: null
+		} </div>
+
 		<br />
 	  </div>
 );
