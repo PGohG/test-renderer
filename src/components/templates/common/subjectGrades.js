@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import {
-	arial12PtL
+	arial12PtC
 } from "./certStyles";
 
 
@@ -22,6 +22,7 @@ const formatYM = ymnum => {
 	if (ymnum.endsWith("12")) {	return 'DEC '+  ymnum.substr(0,4); };
 };
 
+
 const SubjectGrades = ({ doc }) => {
   const semesters = _(doc.transcript)
     .groupBy(t => t.semester)
@@ -32,15 +33,21 @@ const SubjectGrades = ({ doc }) => {
   const semesterHeader = s => {
     if (s.semester.startsWith("999999")) {
       return (
-        <div className="row" style={arial12PtL}>
-	        <div className="semester-header exemption col-12"><u> MODULE(S) EXEMPTED / EARNED CREDITS </u> </div>
+        <div className="row">
+            <div className="col-11"><u> MODULE(S) EXEMPTED / EARNED CREDITS </u></div>
+
+	        {/*<div className="semester-header exemption col-10"><u> MODULE(S) EXEMPTED / EARNED CREDITS </u> </div>
+	        */}
         </div>
       );
     }
 	else {
 		return (
-		  <div className="row" style={arial12PtL}>
-			<div className="semester-header exemption col-12"><u>  {formatYM(s.semester)} EXAM SERIES </u> </div>
+		  <div className="row">
+            <div className="col-11"><u> {formatYM(s.semester)} EXAM SERIES </u></div>
+
+			{/*<div className="semester-header exemption col-10"><u>  {formatYM(s.semester)} EXAM SERIES </u> </div>
+			*/}
 		  </div>
 		);
 	}
@@ -48,11 +55,11 @@ const SubjectGrades = ({ doc }) => {
 
   const subjects = semesters.map((s, j) => {
     const semesterSubjects = s.grades.map((t, i) => (
-      <div className="row" style={arial12PtL} key={i}>
+      <div className="row" key={i}>
         <div className="col-2">{t.courseCode}</div>
-        <div className="col-6">{t.name}</div>
-        <div className="col-2 credit-unit">{t.courseCredit}</div>
-        <div className="col-2 grade">{t.grade}</div>
+        <div className="col-5">{t.name}</div>
+        <div className="col-2 credit-unit" style={arial12PtC}>{t.courseCredit}</div>
+        <div className="col-2 grade" style={arial12PtC}>{t.grade}</div>
       </div>
     ));
 
@@ -61,7 +68,7 @@ const SubjectGrades = ({ doc }) => {
         {semesterHeader(s)}
         {semesterSubjects}
 
-		  <div className="row" style={arial12PtL}>
+		  <div className="row">
 			<div className="col-2"> ***** </div>
 		  </div>
 

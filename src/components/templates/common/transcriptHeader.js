@@ -1,5 +1,8 @@
 import { IMG_TRANSCRIPT_ITE } from "./images";
 import React from "react";
+import {
+	arial12PtL,
+} from "./certStyles";
 
 export const fullWidthStyle = {
   width: "100%",
@@ -8,46 +11,19 @@ export const fullWidthStyle = {
 
 
 const TranscriptHeader = () => (
-  <div className="container">
-    <style>
-      {`
-      .tp-logo {
-        padding-top:1em;
-        width:40%;
-      }
-
-      .page-title {
-        font-weight:bold;
-        font-size:1.5em;
-        padding-top:3em;
-      }
-      `}
-    </style>
+  <div className="container" style={arial12PtL}>
     <br />
     <br />
     <div className="row">
-
-	    <div className="col-12">
-	      <img style={fullWidthStyle}
-	      src={IMG_TRANSCRIPT_ITE}
-          className="ITE-logo"
-          title="ITE"
-	      />
-	    </div>
-
-{/*
-      <div className="col-7">
-        <img
-          src={IMG_TRANSCRIPT_LOGO_ITE}
-          className="ITE-logo"
-          title="ITE"
-        />
-      </div>
-      <div className="col-5 page-title">ACADEMIC TRANSCRIPT</div>
-      */}
+		<div className="col-11">
+			  <img style={fullWidthStyle}
+			  src={IMG_TRANSCRIPT_ITE}
+			  className="ITE-logo"
+			  title="ITE"
+			  />
+		</div>
     </div>
 
-    <br />
     <br />
   </div>
 );

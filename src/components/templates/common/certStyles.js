@@ -27,7 +27,8 @@ export const arial16Pt = {
 export const arial12PtL = {
   fontFamily: "Arial",
   fontSize: "18px",
-  textAlign: "left"
+  textAlign: "left",
+  marginLeft: "4%"
 };
 
 
