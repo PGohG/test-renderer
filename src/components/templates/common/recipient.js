@@ -42,6 +42,8 @@ const Recipient = ({ doc }) => (
 		</div>
 	*/}
 
+	<div className="row"> <br /> </div>
+
     <div className="row">
       <div className="col-3"> ACADEMIC CAREER </div>
       <div className="col-8"> : &nbsp; {doc.additionalData.transcriptData.career} </div>
@@ -67,7 +69,6 @@ const Recipient = ({ doc }) => (
 			<div className="underline-container underline"> &nbsp; </div>
 		</div>
     </div>
-
     <br />
   </div>
 
