@@ -1,48 +1,48 @@
 import _ from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
+import {
+	arial12PtL
+} from "./certStyles";
+
 
 const ExemptionFootNote = ({ doc }) => {
-  // important to check for ' #'
-  // because some subject may contain legitimate # sign, e.g. Programming with C#
-  const isPartiallyExempted = _(doc.transcript).some(t =>
-    t.name.endsWith(" #")
-  );
-  const isFullyExempted = _(doc.transcript).some(t =>
-    t.name.endsWith(" *")
-  );
-  const hasExemption = isPartiallyExempted || isFullyExempted;
 
-  return (
-    <div className="container">
-      <style>
-        {`
-          .exemption-footnote {
-            font-size:0.8em;
-          }
-        `}
-      </style>
-      {hasExemption && (
-        <div className="exemption-footnote">
-          <br />
-          Subjects taken under special arrangements are annotated with the
-          following symbols:
-          {isPartiallyExempted && (
-            <span>
-              <br /> # The candidate was granted partial exemption from the
-              assessment objectives of this subject.
-            </span>
-          )}
-          {isFullyExempted && (
-            <span>
-              <br /> * The candidate was granted full exemption from the
-              assessment objectives of this subject.
-            </span>
-          )}
-        </div>
-      )}
-    </div>
-  );
+  const footer = _(doc.additionalData.transcriptNote)
+	.groupBy(t => t.noteSeq)
+	.map((values, key) => ({ noteSeq: key, notes: values }))
+	.orderBy(s => s.noteSeq)
+	.value();
+
+  const footerTitle = s => {
+	if (s.noteSeq==1) {
+	  return (
+		  <div className="row">
+			<div className="col-11"> NOTE: </div>
+		  </div>
+		)
+	  };
+  };
+
+  const footnotes = footer.map((s, j) => {
+    const footerfootnotes = s.notes.map((t, i) => (
+      <div className="row" key={i}>
+        <div className="col-11">{t.noteSeq} ) &nbsp; {t.note}</div>
+      </div>
+    ));
+
+    return (
+ 	 <div className="container" style={arial12PtL}>
+ 	  <div key={j}>
+        {footerTitle(s)}
+        {footerfootnotes}
+      </div>
+ 	 </div>
+    );
+  });
+
+  return <div>{footnotes}</div>;
+
 };
 
 ExemptionFootNote.propTypes = {

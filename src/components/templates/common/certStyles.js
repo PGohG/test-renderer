@@ -38,6 +38,13 @@ export const arial12PtC = {
   textAlign: "center"
 };
 
+export const arial10PtL = {
+  fontFamily: "Arial",
+  fontSize: "16px",
+  textAlign: "left",
+  marginLeft: "4%"
+};
+
 
 export const arial10Pt = {
   fontFamily: "Arial",

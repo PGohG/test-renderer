@@ -3,8 +3,8 @@ import React from "react";
 import TranscriptHeader from "../common/transcriptHeader";
 import Recipient from "../common/recipient";
 import ExamResults from "../common/examResults";
-import FastGradingScheme from "../common/fastGradingScheme";
 import ExemptionFootNote from "../common/exemptionFootNote";
+import GradingSystem from "../common/gradingSystem";
 import TranscriptFooter from "../common/transcriptFooter";
 
 const Transcript = ({ document }) => (
@@ -13,10 +13,7 @@ const Transcript = ({ document }) => (
 			<TranscriptHeader />
 			<Recipient doc={document} />
 			<ExamResults doc={document} />
-			{/*
-			<FastGradingScheme />
 			<ExemptionFootNote doc={document} />
-			*/}
 			<TranscriptFooter doc={document} />
 		</div>
 	</div>

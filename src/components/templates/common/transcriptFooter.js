@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
 import React from "react";
+import GradingSystem from "./gradingSystem";
 
 import {
-	arial12PtC
+	arial12PtL,
+	arial12PtC,
+	arial10PtL
 } from "./certStyles";
 
 export const fullWidthStyle = {
@@ -10,8 +13,10 @@ export const fullWidthStyle = {
   height: "auto"
 };
 
-const TranscriptFooter = ({ doc }) => (
-  <div className="container">
+
+export const TranscriptFooter = ({ doc }) => (
+
+	<div className="container">
      <style>
        {`
        .sign-underline {
@@ -25,31 +30,26 @@ const TranscriptFooter = ({ doc }) => (
     <br />
 
 	<div className="row">
-	  <div className="col-7">&nbsp;</div>
-	  <div className="col-4">
-		<div className="signature-container sign-underline">
-		  <img
-			style={fullWidthStyle}
-			src={doc.additionalData.transcriptSignatories[0].signature}
-		  />
+		<div className="col-7">
+			<GradingSystem doc={doc} />
 		</div>
-	  </div>
-	  <br />
-	</div>
 
-	<div className="row" style={arial12PtC}>
-	  <div className="col-7">&nbsp;</div>
-	  <div className="col-4">
-		<div className="signature-container"> <strong>
-		  {doc.additionalData.transcriptSignatories[0].designation} </strong>
-		   <br />
-		  {doc.additionalData.transcriptData.effectiveDate}
+		<div className="col-4">
+			<div className="signature-container sign-underline">
+			  <img
+				style={fullWidthStyle}
+				src={doc.additionalData.transcriptSignatories[0].signature}
+			  />
+			</div>
+
+			<div className="signature-container" style={arial12PtC}> <strong>
+			  {doc.additionalData.transcriptSignatories[0].designation} </strong>
+			   <br />
+			  {doc.additionalData.transcriptData.effectiveDate}
+			</div>
 		</div>
-	  </div>
+		<br />
 	</div>
-
-	<br />
-	<br />
   </div>
 );
 
