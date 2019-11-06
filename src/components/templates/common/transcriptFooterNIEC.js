@@ -74,6 +74,7 @@ export const TranscriptFooterNIEC = ({ doc }) => (
   </div>
 );
 
+
 TranscriptFooterNIEC.propTypes = {
   doc: PropTypes.object.isRequired
 };
