@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import GradingSystem from "./gradingSystem";
+import GradingSystemNIEC from "./GradingSystemNIEC";
 
 import {
 	arial12PtL,
@@ -30,11 +30,11 @@ export const TranscriptFooterNIEC = ({ doc }) => (
     <br />
 
 	<div className="row">
-		<div className="col-7">
+		<div className="col-5">
 			<GradingSystem doc={doc} />
 		</div>
 
-		<div className="col-2">
+		<div className="col-3">
 			<br />
 			<br />
 			<div className="signature-container sign-underline">
@@ -49,7 +49,7 @@ export const TranscriptFooterNIEC = ({ doc }) => (
 			</div>
 		</div>
 
-		<div className="col-2">
+		<div className="col-3">
 			<br />
 			<br />
 			<div className="signature-container sign-underline">
