@@ -9,6 +9,7 @@ import CustomTemplate from "./customTemplate";
 import GovTechDemoCert from "./govtechDemoCert";
 import ITE2020FulCert from "./ITE-2020-FUL-CERT-FULL1";
 import ITE2020FulCertNoTS from "./ITE-2020-FUL-CERT-FULL1-NO-TSCPT";
+import ITE2020FulCertNIEC from "./ITE-2020-FUL-CERT-FULL-NIEC1";
 
 export default {
   default: DefaultTemplate,
@@ -16,5 +17,6 @@ export default {
   GOVTECH_DEMO: GovTechDemoCert,
   ITE_2020_FUL_CERT_FULL1: ITE2020FulCert,
   ITE_2020_FUL_CERT_FULL1_NO_TSCPT: ITE2020FulCertNoTS,
+  ITE_2020_FUL_CERT_FULL_NIEC1: ITE2020FulCertNIEC,
   NULL: []
 };
