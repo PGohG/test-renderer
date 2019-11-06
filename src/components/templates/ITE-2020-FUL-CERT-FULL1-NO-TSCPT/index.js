@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { approvedAddresses } from "../common";
 import ITECert from "./certificate";
-import ITEMedia from "./media";
+import ITEMedia from "./common/media";
 
 const templates = [
   {
@@ -11,7 +11,7 @@ const templates = [
   },
   {
     id: "media",
-    label: "Media",
+    label: "OpenCerts Media",
     template: ITEMedia
   }
 ];
