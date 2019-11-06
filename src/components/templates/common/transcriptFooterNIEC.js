@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import GradingSystemNIEC from "./GradingSystemNIEC";
+import GradingSystemNIEC from "./gradingSystemNIEC";
 
 import {
 	arial12PtL,
