@@ -214,7 +214,6 @@ export const renderITEFooter = doc => (
   </div>
 );
 
-{/*
 export const renderCOM = () => (
   <div
     className="row d-flex justify-content-center"
@@ -224,6 +223,39 @@ export const renderCOM = () => (
   </div>
 );
 
+export const renderCOMAwardText = doc => (
+  <div>
+    <div
+      className="row d-flex justify-content-center"
+      style={{ marginTop: "2rem" }}
+    >
+      <span style={arial16Pt}>It is hereby certified that</span>
+    </div>
+    <div className="ml-3">
+      <div className="mr-3">
+        <div className="row d-flex justify-content-center">
+          <span style={timesNewRoman32Pt}>{doc.recipient.name}</span>
+        </div>
+      </div>{" "}
+    </div>
+    <div className="row d-flex justify-content-center">
+      <span style={arial10Pt}>
+        __________________________________________________________________________________________
+      </span>
+    </div>
+    <p>
+      <br />
+    </p>
+    <div className="row d-flex justify-content-center">
+      <span style={arial16Pt}>was awarded the Certificate of Merit</span>
+    </div>
+    <div className="row d-flex justify-content-center">
+      <span style={arial16Pt}>for Outstanding Performance in the</span>
+    </div>
+
+    {renderCertDescr(doc)}
+  </div>
+);
 
 export const renderLogoITEandPartner = () => (
   <div
@@ -240,7 +272,6 @@ export const renderLogoITEandPartner = () => (
     <div className="col-1" />
   </div>
 );
-
 
 
 export const renderTwoNiecSignatures = doc => (
@@ -334,6 +365,7 @@ export const renderTwoNiecSignatures = doc => (
   </div>
 );
 
+{/*
 
 export const renderCertDescr = doc => (
   <div>
@@ -395,79 +427,6 @@ export const renderCertDescr = doc => (
   </div>
 );
 
-export const renderFullCertAwardText = doc => (
-  <div>
-    <div
-      className="row d-flex justify-content-center"
-      style={{ marginTop: "10rem" }}
-    >
-      <span style={arial16Pt}>It is hereby certified that</span>
-    </div>
-    <div className="ml-3">
-      <div className="mr-3">
-        <div className="row d-flex justify-content-center">
-          <span style={timesNewRoman32Pt}>{doc.recipient.name}</span>
-        </div>
-      </div>{" "}
-    </div>
-    <div className="row d-flex justify-content-center">
-      <span style={arial10Pt}>
-        __________________________________________________________________________________________
-      </span>
-    </div>
-    <p>
-      <br />
-    </p>
-    <div className="row d-flex justify-content-center">
-      <span style={arial16Pt}>
-        having successfully completed the programmes of study
-      </span>
-    </div>
-    <div className="row d-flex justify-content-center">
-      <span style={arial16Pt}>and passed the prescribed examinations</span>
-    </div>
-    <div className="row d-flex justify-content-center">
-      <span style={arial16Pt}>was awarded the</span>
-    </div>
-
-    {renderCertDescr(doc)}
-  </div>
-);
-
-
-export const renderCOMAwardText = doc => (
-  <div>
-    <div
-      className="row d-flex justify-content-center"
-      style={{ marginTop: "2rem" }}
-    >
-      <span style={arial16Pt}>It is hereby certified that</span>
-    </div>
-    <div className="ml-3">
-      <div className="mr-3">
-        <div className="row d-flex justify-content-center">
-          <span style={timesNewRoman32Pt}>{doc.recipient.name}</span>
-        </div>
-      </div>{" "}
-    </div>
-    <div className="row d-flex justify-content-center">
-      <span style={arial10Pt}>
-        __________________________________________________________________________________________
-      </span>
-    </div>
-    <p>
-      <br />
-    </p>
-    <div className="row d-flex justify-content-center">
-      <span style={arial16Pt}>was awarded the Certificate of Merit</span>
-    </div>
-    <div className="row d-flex justify-content-center">
-      <span style={arial16Pt}>for Outstanding Performance in the</span>
-    </div>
-
-    {renderCertDescr(doc)}
-  </div>
-);
 */}
 
 /* eslint-disable */

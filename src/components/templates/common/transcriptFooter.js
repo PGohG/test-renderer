@@ -35,6 +35,8 @@ export const TranscriptFooter = ({ doc }) => (
 		</div>
 
 		<div className="col-4">
+			<br />
+			<br />
 			<div className="signature-container sign-underline">
 			  <img
 				style={fullWidthStyle}
@@ -45,11 +47,15 @@ export const TranscriptFooter = ({ doc }) => (
 			<div className="signature-container" style={arial12PtC}> <strong>
 			  {doc.additionalData.transcriptSignatories[0].designation} </strong>
 			   <br />
+			   <br />
 			  {doc.additionalData.transcriptData.effectiveDate}
 			</div>
 		</div>
 		<br />
 	</div>
+
+	<br />
+
   </div>
 );
 

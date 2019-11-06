@@ -1,4 +1,3 @@
-import _ from "lodash";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -30,11 +29,10 @@ export const GradingSystem = ({ doc }) => {
 
   const legendGrades = legend.map((s, j) => {
     const gradeLines = s.grades.map((t, i) => (
-      <div className="row" key={i}>
-
-		<div className="col-3">{t.grade}</div>
-		<div className="col-4">{t.gradeDescription}</div>
-     </div>
+		<div className="row" key={i}>
+			<div className="col-3">{t.grade}</div>
+			<div className="col-4">{t.gradeDescription} &nbsp;</div>
+		</div>
     ));
 
     return (
@@ -48,7 +46,6 @@ export const GradingSystem = ({ doc }) => {
   });
 
   return <div>{legendGrades}</div>;
-
 };
 
 GradingSystem.propTypes = {

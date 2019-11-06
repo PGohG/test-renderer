@@ -16,7 +16,7 @@ const ExamResults = ({ doc }) => (
 		<div className="row">
 			<div className="col-2"><strong>MODULE CODE</strong></div>
 			<div className="col-5"><strong>MODULE TITLE</strong></div>
-			<div className="col-2 credit-unit" style={arial12PtC}><strong>CREDIT EARNED</strong></div>
+			<div className="col-2 credit-unit" style={arial12PtC}><strong> CREDIT EARNED </strong></div>
 			<div className="col-2 grade" style={arial12PtC}><strong>GRADE</strong>
 				<br />
 				<br />
@@ -57,10 +57,8 @@ const ExamResults = ({ doc }) => (
 
 	   <div> {doc.additionalData.transcriptData.napfaField
 		? <div className="row">
-			  {/*<div className="col-4"> <strong> {doc.additionalData.transcriptData.napfaField} </strong> </div>
+			  <div className="col-4"> <strong> {doc.additionalData.transcriptData.napfaField} </strong> </div>
 			  <div className="col-7"> <strong> : &nbsp; &nbsp; {doc.additionalData.transcriptData.napfaStatement} </strong> </div>
-			  */}
-			  <div className="col-11"> <strong> {doc.additionalData.transcriptData.napfaField} &nbsp; &nbsp; : &nbsp; &nbsp; {doc.additionalData.transcriptData.napfaStatement}</strong> </div>
 			  <br />
 			  <br />
 		   </div>

@@ -8,7 +8,7 @@ import GradingSystem from "../common/gradingSystem";
 import TranscriptFooter from "../common/transcriptFooter";
 
 const Transcript = ({ document }) => (
-	<div className="container" style={{ border: 5, borderColor: "#AAA", borderStyle: "solid"}}>
+	<div className="container">
 		<div className="transcript-content">
 			<TranscriptHeader />
 			<Recipient doc={document} />

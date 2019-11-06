@@ -10,37 +10,48 @@ import {
 
 const Recipient = ({ doc }) => (
   <div className="container" style={arial12PtL}>
-	   <style>
-		 {`
-		 .underline {
-		   border-bottom: 1px solid #212529;
-		 }
-
-		 `}
-	   </style>
+	<style>
+		{`
+		.underline { border-bottom: 1px solid #212529; }
+		`}
+	</style>
 
     <div className="row">
-      <div className="col-7"> NAME : &nbsp; &nbsp; <strong>{doc.recipient.name}</strong> </div>
+      <div className="col-2"> NAME </div>
+      <div className="col-5"> : &nbsp; {doc.recipient.name} </div>
 	  <div className="col-4"> IDENTIFICATION NO: &nbsp; {doc.recipient.studentId} </div>
     </div>
 
-	{/*
-    <div className="row">
-	<RecipientAddress certificate={doc} />
-	  <div className="col-11">  ADDRESS : &nbsp; 1234  ANG MO KIO AVENUE 5678 </div>
-	  <div className="col-11">  #22-6789 </div>
-	  <div className="col-11">  SINGAPORE 123456 </div>
-	  <br />
-    </div>
-	*/}
+   <div> {doc.additionalData.transcriptData.addressLine1
+	? <div className="row">
+		  <div className="col-2"> ADDRESS </div>
+		  <div className="col-9"> : &nbsp; {doc.additionalData.transcriptData.addressLine1} </div>
+	   </div>
+	: null
+	} </div>
 
-	{/*
-		<div className="row">
-		  <div className="col-11">
-			ACADEMIC CAREER : &nbsp; {doc.additionalData.transcriptData.career}
-		  </div>
-		</div>
-	*/}
+   <div> {doc.additionalData.transcriptData.addressLine2
+	? <div className="row">
+		  <div className="col-2">  </div>
+		  <div className="col-9"> &nbsp; &nbsp; {doc.additionalData.transcriptData.addressLine2} </div>
+	   </div>
+	: null
+	} </div>
+
+   <div> {doc.additionalData.transcriptData.addressLine3
+	? <div className="row">
+		  <div className="col-2"> </div>
+		  <div className="col-9"> &nbsp; &nbsp; {doc.additionalData.transcriptData.addressLine3} </div>
+	   </div>
+	: null
+	} </div>
+   <div> {doc.additionalData.transcriptData.addressLine4
+	? <div className="row">
+		  <div className="col-2">  </div>
+		  <div className="col-9"> &nbsp; &nbsp; {doc.additionalData.transcriptData.addressLine4} </div>
+	   </div>
+	: null
+	} </div>
 
 	<div className="row"> <br /> </div>
 

@@ -35,9 +35,6 @@ const SubjectGrades = ({ doc }) => {
       return (
         <div className="row">
             <div className="col-11"><u> MODULE(S) EXEMPTED / EARNED CREDITS </u></div>
-
-	        {/*<div className="semester-header exemption col-10"><u> MODULE(S) EXEMPTED / EARNED CREDITS </u> </div>
-	        */}
         </div>
       );
     }
@@ -45,9 +42,6 @@ const SubjectGrades = ({ doc }) => {
 		return (
 		  <div className="row">
             <div className="col-11"><u> {formatYM(s.semester)} EXAM SERIES </u></div>
-
-			{/*<div className="semester-header exemption col-10"><u>  {formatYM(s.semester)} EXAM SERIES </u> </div>
-			*/}
 		  </div>
 		);
 	}
@@ -57,8 +51,8 @@ const SubjectGrades = ({ doc }) => {
     const semesterSubjects = s.grades.map((t, i) => (
       <div className="row" key={i}>
         <div className="col-2">{t.courseCode}</div>
-        <div className="col-5">{t.name}</div>
-        <div className="col-2 credit-unit" style={arial12PtC}>{t.courseCredit}</div>
+        <div className="col-6">{t.name}</div>
+        <div className="col-1 credit-unit" style={arial12PtC}>{t.courseCredit}</div>
         <div className="col-2 grade" style={arial12PtC}>{t.grade}</div>
       </div>
     ));
