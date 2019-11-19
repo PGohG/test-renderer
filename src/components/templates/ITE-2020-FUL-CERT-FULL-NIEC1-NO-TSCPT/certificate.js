@@ -6,7 +6,7 @@ import {
   renderFullCertAwardText,
   renderTwoNiecSignatures,
   renderITEFooter
-} from "../common2/certDetails";
+} from "../common/certDetails";
 
 
 const Template = ({ certificate }) => (
