@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import {
-	arial10PtL
+	arial10PtL,
+	arial10PtC
 } from "./certStyles";
 
 export const GradingSystemNIEC = ({ doc }) => {
@@ -21,8 +22,8 @@ export const GradingSystemNIEC = ({ doc }) => {
 			<div className="col-11"> <strong> Module Grading System: </strong> </div>
 			<br />
 			<br />
-			<div className="col-3"><u>Grade</u></div>
-			<div className="col-4"><u>Description</u></div>
+			<div className="col-4"><u>Grade</u></div>
+			<div className="col-8"><u>Description</u></div>
 		  </div>
 		)
 	  };
@@ -31,8 +32,8 @@ export const GradingSystemNIEC = ({ doc }) => {
   const legendGrades = legend.map((s, j) => {
     const gradeLines = s.grades.map((t, i) => (
 		<div className="row" key={i}>
-			<div className="col-3">{t.grade}</div>
-			<div className="col-4">{t.gradeDescription} &nbsp;</div>
+			<div className="col-4">{t.grade}</div>
+			<div className="col-8">{t.gradeDescription} &nbsp;</div>
 		</div>
     ));
 

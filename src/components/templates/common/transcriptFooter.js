@@ -13,16 +13,12 @@ export const fullWidthStyle = {
   height: "auto"
 };
 
-
 export const TranscriptFooter = ({ doc }) => (
 
 	<div className="container">
      <style>
        {`
-       .sign-underline {
-         border-bottom: 1px solid #212529;
-       }
-
+       .sign-underline { border-bottom: 1px solid #212529; }
        `}
      </style>
 
@@ -30,8 +26,12 @@ export const TranscriptFooter = ({ doc }) => (
     <br />
 
 	<div className="row">
-		<div className="col-7">
+		<div className="col-4">
 			<GradingSystem doc={doc} />
+		</div>
+
+		<div className="col-3">
+		    <br />
 		</div>
 
 		<div className="col-4">

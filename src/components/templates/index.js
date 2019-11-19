@@ -7,16 +7,31 @@
 import DefaultTemplate from "./default";
 import CustomTemplate from "./customTemplate";
 import GovTechDemoCert from "./govtechDemoCert";
+
+import ITE2007ComCert from "./ITE-2007-COM-CERT-COM1";
+import ITE2007FulCert from "./ITE-2007-FUL-CERT-FULL1";
+import ITE2007FulCertNoTS from "./ITE-2007-FUL-CERT-FULL1-NO-TSCPT";
+
+import ITE2020ComCert from "./ITE-2020-COM-CERT-COM1";
+import ITE2020ComCertNIEC from "./ITE-2020-COM-CERT-COM1-NIEC";
+
 import ITE2020FulCert from "./ITE-2020-FUL-CERT-FULL1";
 import ITE2020FulCertNoTS from "./ITE-2020-FUL-CERT-FULL1-NO-TSCPT";
 import ITE2020FulCertNIEC from "./ITE-2020-FUL-CERT-FULL-NIEC1";
+import ITE2020FulCertNIECNoTS from "./ITE-2020-FUL-CERT-FULL-NIEC1-NO-TSCPT";
 
 export default {
   default: DefaultTemplate,
   CUSTOM_TEMPLATE: CustomTemplate,
   GOVTECH_DEMO: GovTechDemoCert,
+  ITE_2007_COM_CERT_COM1: ITE2007ComCert,
+  ITE_2007_FUL_CERT_FULL1: ITE2007FulCert,
+  ITE_2007_FUL_CERT_FULL1_NO_TSCPT: ITE2007FulCertNoTS,
+  ITE_2020_COM_CERT_COM1: ITE2020ComCert,
+  ITE_2020_COM_CERT_COM1_NIEC: ITE2020ComCertNIEC,
   ITE_2020_FUL_CERT_FULL1: ITE2020FulCert,
   ITE_2020_FUL_CERT_FULL1_NO_TSCPT: ITE2020FulCertNoTS,
   ITE_2020_FUL_CERT_FULL_NIEC1: ITE2020FulCertNIEC,
+  ITE_2020_FUL_CERT_FULL1_NIEC1_NO_TSCPT: ITE2020FulCertNIECNoTS,
   NULL: []
 };

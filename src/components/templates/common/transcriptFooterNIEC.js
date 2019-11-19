@@ -30,11 +30,11 @@ export const TranscriptFooterNIEC = ({ doc }) => (
     <br />
 
 	<div className="row">
-		<div className="col-5">
+		<div className="col-4">
 			<GradingSystemNIEC doc={doc} />
 		</div>
 
-		<div className="col-3">
+		<div className="col-4">
 			<br />
 			<br />
 			<div className="signature-container sign-underline">
@@ -44,12 +44,13 @@ export const TranscriptFooterNIEC = ({ doc }) => (
 			  />
 			</div>
 
-			<div className="signature-container" style={arial12PtC}> <strong>
-			  {doc.additionalData.transcriptSignatories[0].designation} </strong>
+			<div className="signature-container" style={arial12PtC}>
+			  <strong> {doc.additionalData.transcriptSignatories[0].designation} </strong>
+			  <strong> {doc.additionalData.transcriptSignatories[0].organisation} </strong>
 			</div>
 		</div>
 
-		<div className="col-3">
+		<div className="col-4">
 			<br />
 			<br />
 			<div className="signature-container sign-underline">
@@ -59,8 +60,9 @@ export const TranscriptFooterNIEC = ({ doc }) => (
 			  />
 			</div>
 
-			<div className="signature-container" style={arial12PtC}> <strong>
-			  {doc.additionalData.transcriptSignatories[1].designation} </strong>
+			<div className="signature-container" style={arial12PtC}>
+			  <strong>{doc.additionalData.transcriptSignatories[1].designation} </strong>
+			  <strong>{doc.additionalData.transcriptSignatories[1].organisation} </strong>
 			   <br />
 			   <br />
 			  {doc.additionalData.transcriptData.effectiveDate}

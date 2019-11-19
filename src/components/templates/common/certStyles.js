@@ -27,8 +27,7 @@ export const arial16Pt = {
 export const arial12PtL = {
   fontFamily: "Arial",
   fontSize: "18px",
-  textAlign: "left",
-  marginLeft: "4%"
+  textAlign: "left"
 };
 
 
@@ -41,19 +40,19 @@ export const arial12PtC = {
 export const arial10PtL = {
   fontFamily: "Arial",
   fontSize: "16px",
-  textAlign: "left",
-  marginLeft: "4%"
+  textAlign: "left"
 };
 
+export const arial10PtC = {
+  fontFamily: "Arial",
+  fontSize: "16px",
+  textAlign: "center"
+};
 
 export const arial10Pt = {
   fontFamily: "Arial",
   fontSize: "16px",
-  textAlign: "center",
-  marginTop: "0",
-  marginBottom: "0",
-  marginLeft: "0",
-  marginRight: "0"
+  textAlign: "center"
 };
 
 export const arial5Pt = {
