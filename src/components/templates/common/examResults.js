@@ -41,8 +41,8 @@ const ExamResults = ({ doc }) => (
 
  	   <div> {doc.additionalData.transcriptData.awardStatement
 		? <div className="row">
-			  <div className="col-2"> <strong> AWARD </strong> </div>
-			  <div className="col-9"> <strong> : &nbsp; &nbsp; {doc.additionalData.transcriptData.napfaStatement} </strong> </div>
+			  <div className="col-2"> <strong> AWARD &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : </strong> </div>
+			  <div className="col-9"> <strong> {doc.additionalData.transcriptData.awardStatement} </strong> </div>
 			  <br />
 			  <br />
 		   </div>
