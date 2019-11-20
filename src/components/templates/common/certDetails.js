@@ -273,7 +273,6 @@ export const renderLogoITEandPartner = () => (
   </div>
 );
 
-
 export const renderTwoNiecSignatures = doc => (
   <div
     className="row d-flex justify-content-center"
@@ -440,7 +439,7 @@ export default () => ({ doc }) => (
       {renderLogoITE()}
       {renderAwardText(doc)}
       {renderTwoSignatures(doc)}
-	   {renderITEFooter(doc)}
+	  {renderITEFooter(doc)}
   </div>
   </div>
 );

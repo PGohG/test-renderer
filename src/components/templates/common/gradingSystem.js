@@ -18,12 +18,12 @@ export const GradingSystem = ({ doc }) => {
   const legendTitle = s => {
 	if (s.gradeSeq==1) {
 	  return (
-		  <div className="row" style={arial10PtL}>
+		  <div className="row">
 			<div className="col-11" style={arial10PtL}> <strong> Module Grading System: </strong> </div>
 			<br />
 			<br />
-			<div className="col-5"><u>Grade</u></div>
-			<div className="col-7"><u>Description</u></div>
+			<div className="col-5" style={arial10PtC}><u>Grade</u></div>
+			<div className="col-7" style={arial10PtL}><u>Description</u></div>
 		  </div>
 		)
 	  };
@@ -31,14 +31,14 @@ export const GradingSystem = ({ doc }) => {
 
   const legendGrades = legend.map((s, j) => {
     const gradeLines = s.grades.map((t, i) => (
-		<div className="row" key={i}  style={arial10PtL}>
-			<div className="col-5">{t.grade}</div>
-			<div className="col-7">{t.gradeDescription} &nbsp;</div>
+		<div className="row" key={i}>
+			<div className="col-5" style={arial10PtC}>{t.grade}</div>
+			<div className="col-7" style={arial10PtL}>{t.gradeDescription} &nbsp;</div>
 		</div>
     ));
 
     return (
- 	 <div className="container" style={arial10PtL}>
+ 	 <div className="container">
  	  <div key={j}>
         {legendTitle(s)}
         {gradeLines}

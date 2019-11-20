@@ -30,6 +30,11 @@ export const arial12PtL = {
   textAlign: "left"
 };
 
+export const arial12PtR = {
+  fontFamily: "Arial",
+  fontSize: "18px",
+  textAlign: "right"
+};
 
 export const arial12PtC = {
   fontFamily: "Arial",

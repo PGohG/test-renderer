@@ -46,6 +46,7 @@ export const TranscriptFooterNIEC = ({ doc }) => (
 
 			<div className="signature-container" style={arial12PtC}>
 			  <strong> {doc.additionalData.transcriptSignatories[0].designation} </strong>
+			  <br />
 			  <strong> {doc.additionalData.transcriptSignatories[0].organisation} </strong>
 			</div>
 		</div>
@@ -62,6 +63,7 @@ export const TranscriptFooterNIEC = ({ doc }) => (
 
 			<div className="signature-container" style={arial12PtC}>
 			  <strong>{doc.additionalData.transcriptSignatories[1].designation} </strong>
+			  <br />
 			  <strong>{doc.additionalData.transcriptSignatories[1].organisation} </strong>
 			   <br />
 			   <br />
