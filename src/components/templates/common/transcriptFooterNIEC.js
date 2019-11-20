@@ -28,7 +28,7 @@ export const TranscriptFooterNIEC = ({ doc }) => (
     <br />
 
 	<div className="row">
-		<div className="col-4">
+		<div className="col-3">
 			<GradingSystemNIEC doc={doc} />
 		</div>
 
