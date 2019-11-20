@@ -19,7 +19,7 @@ const Recipient = ({ doc }) => (
     <div className="row">
       <div className="col-2"> NAME </div>
       <div className="col-5"> : &nbsp; {doc.recipient.name} </div>
-	  <div className="col-4"> IDENTIFICATION NO: &nbsp; {doc.recipient.studentId} </div>
+	  <div className="col-4"> IDENTIFICATION NO. &nbsp; : &nbsp; {doc.recipient.studentId} </div>
     </div>
 
    <div> {doc.additionalData.transcriptData.addressLine1
