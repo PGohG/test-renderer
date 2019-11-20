@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import TranscriptHeader from "../common/transcriptHeader";
+import TranscriptHeaderNIEC from "../common/transcriptHeaderNIEC";
 import Recipient from "../common/recipient";
 import ExamResults from "../common/examResults";
 import ExemptionFootNote from "../common/exemptionFootNote";
@@ -9,7 +9,7 @@ import TranscriptFooterNIEC from "../common/transcriptFooterNIEC";
 const Transcript = ({ document }) => (
 	<div className="container">
 		<div className="transcript-content">
-			<TranscriptHeader />
+			<TranscriptHeaderNIEC />
 			<Recipient doc={document} />
 			<ExamResults doc={document} />
 			<ExemptionFootNote doc={document} />
