@@ -32,8 +32,8 @@ const ExamResults = ({ doc }) => (
 		</div>
 
 		<div className="row">
-		  <div className="col-1"> <strong> RESULT </strong></div>
-		  <div className="col-10"> <strong> : &nbsp; &nbsp; {doc.additionalData.transcriptData.resultStatement}</strong>
+		  <div className="col-2"> <strong> RESULT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :</strong></div>
+		  <div className="col-10"> <strong> {doc.additionalData.transcriptData.resultStatement}</strong>
 			  <br />
 			  <br />
 		  </div>
@@ -42,7 +42,7 @@ const ExamResults = ({ doc }) => (
  	   <div> {doc.additionalData.transcriptData.awardStatement
 		? <div className="row">
 			  <div className="col-2"> <strong> AWARD </strong> </div>
-			  <div className="col-9"> <strong> : &nbsp; &nbsp; {doc.additionalData.transcriptData.napfaStatement} </strong> </div>
+			  <div className="col-10"> <strong> : &nbsp; &nbsp; {doc.additionalData.transcriptData.napfaStatement} </strong> </div>
 			  <br />
 			  <br />
 		   </div>
@@ -52,7 +52,7 @@ const ExamResults = ({ doc }) => (
 	   <div> {doc.additionalData.transcriptData.napfaField
 		? <div className="row">
 			  <div className="col-4"> <strong> {doc.additionalData.transcriptData.napfaField} </strong> </div>
-			  <div className="col-7"> <strong> : &nbsp; &nbsp; {doc.additionalData.transcriptData.napfaStatement} </strong> </div>
+			  <div className="col-8"> <strong> : &nbsp; &nbsp; {doc.additionalData.transcriptData.napfaStatement} </strong> </div>
 			  <br />
 			  <br />
 		   </div>
@@ -62,7 +62,7 @@ const ExamResults = ({ doc }) => (
 	   <div> {doc.additionalData.transcriptData.ccaGrade
 		? <div className="row">
 			  <div className="col-4"> <strong> CO-CURRICULAR ACTIVITIES GRADE </strong> </div>
-			  <div className="col-7"> <strong> : &nbsp; &nbsp; {doc.additionalData.transcriptData.ccaGrade} </strong> </div>
+			  <div className="col-8"> <strong> : &nbsp; &nbsp; {doc.additionalData.transcriptData.ccaGrade} </strong> </div>
 		   </div>
 		: null
 		} </div>
@@ -70,7 +70,7 @@ const ExamResults = ({ doc }) => (
 	   <div> {doc.additionalData.transcriptData.ccaAdvantage
 		? <div className="row">
 			  <div className="col-4"> &nbsp; </div>
-			  <div className="col-7"> <strong> &nbsp; &nbsp; &nbsp; {doc.additionalData.transcriptData.ccaAdvantage} </strong> </div>
+			  <div className="col-8"> <strong> &nbsp; &nbsp; &nbsp; {doc.additionalData.transcriptData.ccaAdvantage} </strong> </div>
 		   </div>
 		: null
 		} </div>
