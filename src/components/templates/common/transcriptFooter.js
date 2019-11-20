@@ -3,9 +3,7 @@ import React from "react";
 import GradingSystem from "./gradingSystem";
 
 import {
-	arial12PtL,
-	arial12PtC,
-	arial10PtL
+	arial11PtC
 } from "./certStyles";
 
 export const fullWidthStyle = {
@@ -44,7 +42,7 @@ export const TranscriptFooter = ({ doc }) => (
 			  />
 			</div>
 
-			<div className="signature-container" style={arial12PtC}> <strong>
+			<div className="signature-container" style={arial11PtC}> <strong>
 			  {doc.additionalData.transcriptSignatories[0].designation} </strong>
 			   <br />
 			   <br />

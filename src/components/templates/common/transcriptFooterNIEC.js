@@ -3,9 +3,7 @@ import React from "react";
 import GradingSystemNIEC from "./gradingSystemNIEC";
 
 import {
-	arial12PtL,
-	arial12PtC,
-	arial10PtL
+	arial11PtC
 } from "./certStyles";
 
 export const fullWidthStyle = {
@@ -44,7 +42,7 @@ export const TranscriptFooterNIEC = ({ doc }) => (
 			  />
 			</div>
 
-			<div className="signature-container" style={arial12PtC}>
+			<div className="signature-container" style={arial11PtC}>
 			  <strong> {doc.additionalData.transcriptSignatories[0].designation} </strong>
 			  <br />
 			  <strong> {doc.additionalData.transcriptSignatories[0].organisation} </strong>
@@ -61,7 +59,7 @@ export const TranscriptFooterNIEC = ({ doc }) => (
 			  />
 			</div>
 
-			<div className="signature-container" style={arial12PtC}>
+			<div className="signature-container" style={arial11PtC}>
 			  <strong>{doc.additionalData.transcriptSignatories[1].designation} </strong>
 			  <br />
 			  <strong>{doc.additionalData.transcriptSignatories[1].organisation} </strong>

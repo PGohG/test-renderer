@@ -42,21 +42,31 @@ export const arial12PtC = {
   textAlign: "center"
 };
 
-export const arial10PtL = {
+export const arial11PtC = {
   fontFamily: "Arial",
-  fontSize: "16px",
-  textAlign: "left"
-};
-
-export const arial10PtC = {
-  fontFamily: "Arial",
-  fontSize: "16px",
+  fontSize: "17px",
   textAlign: "center"
 };
 
 export const arial10Pt = {
   fontFamily: "Arial",
   fontSize: "16px",
+  textAlign: "center",
+  marginTop: "0",
+  marginBottom: "0",
+  marginLeft: "0",
+  marginRight: "0"
+};
+
+export const arial9PtL = {
+  fontFamily: "Arial",
+  fontSize: "15px",
+  textAlign: "left"
+};
+
+export const arial9PtC = {
+  fontFamily: "Arial",
+  fontSize: "15px",
   textAlign: "center"
 };
 
