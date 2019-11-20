@@ -60,14 +60,22 @@ export const arial10Pt = {
 
 export const arial9PtL = {
   fontFamily: "Arial",
-  fontSize: "14px",
-  textAlign: "left"
+  fontSize: "12px",
+  textAlign: "left",
+  marginTop: "0",
+  marginBottom: "0",
+  marginLeft: "0",
+  marginRight: "0"
 };
 
 export const arial9PtC = {
   fontFamily: "Arial",
-  fontSize: "14px",
-  textAlign: "center"
+  fontSize: "12px",
+  textAlign: "center",
+  marginTop: "0",
+  marginBottom: "0",
+  marginLeft: "0",
+  marginRight: "0"
 };
 
 export const arial5Pt = {
