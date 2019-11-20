@@ -22,8 +22,8 @@ export const GradingSystemNIEC = ({ doc }) => {
 			<div className="col-11" style={arial9PtL}> <strong> Module Grading System: </strong> </div>
 			<br />
 			<br />
-			<div className="col-4" style={arial9PtC}><u>Grade</u></div>
-			<div className="col-8" style={arial9PtL}><u>Description</u></div>
+			<div className="col-5" style={arial9PtC}><u>Grade</u></div>
+			<div className="col-7" style={arial9PtL}><u>Description</u></div>
 		  </div>
 		)
 	  };
@@ -32,8 +32,8 @@ export const GradingSystemNIEC = ({ doc }) => {
   const legendGrades = legend.map((s, j) => {
     const gradeLines = s.grades.map((t, i) => (
 		<div className="row" key={i}>
-			<div className="col-4" style={arial9PtC}>{t.grade}</div>
-			<div className="col-8" style={arial9PtL}>{t.gradeDescription} &nbsp;</div>
+			<div className="col-5" style={arial9PtC}>{t.grade}</div>
+			<div className="col-7" style={arial9PtL}>{t.gradeDescription} &nbsp;</div>
 		</div>
     ));
 
