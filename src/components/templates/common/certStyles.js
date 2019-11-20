@@ -60,13 +60,13 @@ export const arial10Pt = {
 
 export const arial9PtL = {
   fontFamily: "Arial",
-  fontSize: "15px",
+  fontSize: "14px",
   textAlign: "left"
 };
 
 export const arial9PtC = {
   fontFamily: "Arial",
-  fontSize: "15px",
+  fontSize: "14px",
   textAlign: "center"
 };
 
