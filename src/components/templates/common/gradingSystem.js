@@ -16,7 +16,7 @@ export const GradingSystem = ({ doc }) => {
 	.value();
 
   const legendTitle = s => {
-	if (s.gradeSeq==1) {
+	if (s.gradeSeq===1) {
 	  return (
 		  <div className="row">
 			<div className="col-11" style={arial9PtL}> <strong> Module Grading System: </strong> </div>

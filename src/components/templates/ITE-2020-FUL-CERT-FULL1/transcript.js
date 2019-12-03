@@ -4,7 +4,6 @@ import TranscriptHeader from "../common/transcriptHeader";
 import Recipient from "../common/recipient";
 import ExamResults from "../common/examResults";
 import ExemptionFootNote from "../common/exemptionFootNote";
-import GradingSystem from "../common/gradingSystem";
 import TranscriptFooter from "../common/transcriptFooter";
 
 const Transcript = ({ document }) => (

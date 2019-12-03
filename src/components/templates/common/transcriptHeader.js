@@ -20,6 +20,7 @@ const TranscriptHeader = () => (
 			  src={IMG_TRANSCRIPT_ITE}
 			  className="ITE-logo"
 			  title="ITE"
+			  alt="ITE Transcript Header"
 			  />
 		</div>
     </div>

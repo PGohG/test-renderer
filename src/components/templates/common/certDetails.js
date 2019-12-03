@@ -11,10 +11,7 @@ import {
 	arial5Pt,
 	timesNewRoman24Pt,
 	timesNewRoman32Pt,
-	printTextStyle,
-	COMTextStyle,
-	nameTextStyle,
-	titleTextStyle
+	COMTextStyle
 } from "./certStyles";
 
 import {
@@ -36,7 +33,7 @@ export const renderLogoITE = () => (
   <div className="row d-flex justify-content-center">
     <div className="col-1" />
     <div className="col-10">
-      <img style={halfWidthStyle} src={IMG_CERT_FULL1_LOGO_ITE} />
+      <img style={halfWidthStyle} src={IMG_CERT_FULL1_LOGO_ITE} alt="ITE Logo" />
     </div>
     <div className="col-1" />
   </div>
@@ -149,7 +146,7 @@ export const renderTwoSignatures = doc => (
   >
     <div className="col-4 justify-content-center">
       <div className="row justify-content-center align-items-center">
-        <img style={threeqartWidthStyle} src={IMG_CERTIFICATE_SEAL} />
+        <img style={threeqartWidthStyle} src={IMG_CERTIFICATE_SEAL} alt="ITE Seal" />
       </div>
     </div>
 
@@ -165,10 +162,7 @@ export const renderSignatory = (doc, count, certnbr, separ, stdid) => (
     style={{ marginTop: "4rem", marginBottom: "0" }}
   >
     <div className="px-4">
-      <img
-        style={fullWidthStyle}
-        src={get(doc, `additionalData.certSignatories[${count}].signature`)}
-      />
+      <img style={fullWidthStyle} src={get(doc, `additionalData.certSignatories[${count}].signature`)} alt="Cert Sign" />
     </div>
     <div className="text-center">
       <strong>
@@ -264,10 +258,10 @@ export const renderLogoITEandPartner = () => (
   >
     <div className="col-1" />
     <div className="col-5">
-      <img style={fullWidthStyle} src={IMG_CERT_NIEC1_LOGO_ITE} />
+      <img style={fullWidthStyle} src={IMG_CERT_NIEC1_LOGO_ITE} alt="ITENIEC Logo" />
     </div>
     <div className="col-5">
-      <img style={fullWidthStyle} src={IMG_CERT_NIEC1ITE_LOGO_ITE} />
+      <img style={fullWidthStyle} src={IMG_CERT_NIEC1ITE_LOGO_ITE} alt="ITENIEC Logo" />
     </div>
     <div className="col-1" />
   </div>
@@ -280,7 +274,7 @@ export const renderTwoNiecSignatures = doc => (
   >
     <div className="col-4 justify-content-center">
       <div className="row d-flex justify-content-center align-items-center">
-        <img style={threeqartWidthStyle} src={IMG_CERTIFICATE_SEAL} />
+        <img style={threeqartWidthStyle} src={IMG_CERTIFICATE_SEAL} alt="ITE Seal" />
       </div>
     </div>
 
@@ -289,10 +283,7 @@ export const renderTwoNiecSignatures = doc => (
       style={{ marginTop: "4rem", marginBottom: "0" }}
     >
       <div className="px-4">
-        <img
-          style={fullWidthStyle}
-          src={get(doc, "additionalData.certSignatories[0].signature")}
-        />
+        <img style={fullWidthStyle} src={get(doc, "additionalData.certSignatories[0].signature")} alt="Cert Sign" />
       </div>
       <div className="text-center">
         <strong>
@@ -331,10 +322,7 @@ export const renderTwoNiecSignatures = doc => (
       style={{ marginTop: "4rem", marginBottom: "0" }}
     >
       <div className="px-4">
-        <img
-          style={fullWidthStyle}
-          src={get(doc, "additionalData.certSignatories[1].signature")}
-        />
+        <img style={fullWidthStyle} src={get(doc, "additionalData.certSignatories[1].signature")} alt="Cert Sign" />
       </div>
       <div className="text-center">
         <strong>
@@ -364,69 +352,6 @@ export const renderTwoNiecSignatures = doc => (
   </div>
 );
 
-{/*
-
-export const renderCertDescr = doc => (
-  <div>
-    <p>
-      <br />
-    </p>
-    <div className="ml-5">
-      <div className="mr-5">
-        <div className="row d-flex justify-content-center">
-          <span style={timesNewRoman32Pt}>
-            <p style={timesNewRoman32Pt}>{doc.description}</p>
-          </span>
-        </div>
-      </div>{" "}
-    </div>
-    <div className="ml-5">
-      <div className="mr-5">
-        <div className="row d-flex justify-content-center">
-          {!doc.description.includes(" in ") && (
-            <span style={timesNewRoman32Pt}>
-              <p style={timesNewRoman32Pt}>in</p>
-            </span>
-          )}
-        </div>
-      </div>{" "}
-    </div>
-    <div className="ml-5">
-      <div className="mr-5">
-        <div className="row d-flex justify-content-center">
-          <span style={timesNewRoman32Pt}>
-            <p style={timesNewRoman32Pt}>
-              {doc.additionalData.courseDescription}
-            </p>
-          </span>
-        </div>
-      </div>{" "}
-    </div>
-    <div className="ml-5">
-      <div className="mr-5">
-        <div className="row d-flex justify-content-center">
-          <span style={timesNewRoman32Pt}>
-            <p style={timesNewRoman32Pt}>
-              {doc.additionalData.courseSpecialisation}
-            </p>
-          </span>
-        </div>
-      </div>{" "}
-    </div>
-    <div className="row d-flex justify-content-center">
-      <span style={arial16Pt}>on</span>
-    </div>
-    <div className="row d-flex justify-content-center">
-      <span style={timesNewRoman32Pt}>
-        <p style={timesNewRoman32Pt}>
-          {formatDateFullMonthProper(doc.graduationDate)}
-        </p>
-      </span>
-    </div>
-  </div>
-);
-
-*/}
 
 /* eslint-disable */
 // Disabled eslint as there's no way to add proptypes to an anonymous function like this

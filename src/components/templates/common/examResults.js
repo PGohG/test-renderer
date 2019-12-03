@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import React from "react";
-import ExamResultsStyles from "./examResultsStyles";
 import SubjectGrades from "./subjectGrades";
 
 import {

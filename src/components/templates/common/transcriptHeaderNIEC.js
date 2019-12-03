@@ -20,6 +20,7 @@ const TranscriptHeaderNIEC = () => (
 			  src={IMG_TRANSCRIPT_NIECITE}
 			  className="NIECITE-logo"
 			  title="NIECITE"
+			  alt="ITE Transcript Header"
 			  />
 		</div>
     </div>

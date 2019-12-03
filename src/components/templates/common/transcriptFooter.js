@@ -39,6 +39,7 @@ export const TranscriptFooter = ({ doc }) => (
 			  <img
 				style={fullWidthStyle}
 				src={doc.additionalData.transcriptSignatories[0].signature}
+				alt="Transcript Sign"
 			  />
 			</div>
 

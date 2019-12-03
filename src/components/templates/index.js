@@ -6,7 +6,6 @@
 // TODO: Use dynamic loading to prevent all templates to be loaded at once.
 import DefaultTemplate from "./default";
 import CustomTemplate from "./customTemplate";
-import GovTechDemoCert from "./govtechDemoCert";
 
 import ITE2007ComCert from "./ITE-2007-COM-CERT-COM1";
 import ITE2007FulCert from "./ITE-2007-FUL-CERT-FULL1";
@@ -23,7 +22,6 @@ import ITE2020FulCertNIECNoTS from "./ITE-2020-FUL-CERT-FULL-NIEC1-NO-TSCPT";
 export default {
   default: DefaultTemplate,
   CUSTOM_TEMPLATE: CustomTemplate,
-  GOVTECH_DEMO: GovTechDemoCert,
   ITE_2007_COM_CERT_COM1: ITE2007ComCert,
   ITE_2007_FUL_CERT_FULL1: ITE2007FulCert,
   ITE_2007_FUL_CERT_FULL1_NO_TSCPT: ITE2007FulCertNoTS,

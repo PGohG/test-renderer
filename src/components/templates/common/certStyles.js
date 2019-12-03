@@ -1,6 +1,3 @@
-import { get } from "lodash";
-import React from "react";
-
 export const TIMEZONE = "Asia/Singapore";
 
 export const fullWidthStyle = {

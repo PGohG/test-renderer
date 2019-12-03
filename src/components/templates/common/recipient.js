@@ -1,10 +1,8 @@
 import PropTypes from "prop-types";
 import React from "react";
-import RecipientAddress from "./recipientAddress";
 
 import {
-	arial12PtL,
-	arial12PtC
+	arial12PtL
 } from "./certStyles";
 
 

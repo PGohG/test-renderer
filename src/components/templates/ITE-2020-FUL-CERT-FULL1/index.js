@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-import { approvedAddresses } from "../common";
 import ITECert from "./certificate";
 import ITETranscript from "./transcript";
 import ITEMedia from "../common/media";

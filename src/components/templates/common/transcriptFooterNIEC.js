@@ -39,6 +39,7 @@ export const TranscriptFooterNIEC = ({ doc }) => (
 			  <img
 				style={fullWidthStyle}
 				src={doc.additionalData.transcriptSignatories[0].signature}
+				alt="ITE Transcript Sign"
 			  />
 			</div>
 
@@ -56,6 +57,7 @@ export const TranscriptFooterNIEC = ({ doc }) => (
 			  <img
 				style={fullWidthStyle}
 				src={doc.additionalData.transcriptSignatories[1].signature}
+				alt="ITE Transcript Sign"
 			  />
 			</div>
 
