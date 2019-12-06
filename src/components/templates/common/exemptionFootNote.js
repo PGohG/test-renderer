@@ -18,8 +18,11 @@ const ExemptionFootNote = ({ doc }) => {
 	if (s.noteSeq==1) {
 	  return (
 		  <div className="row">
-			<div className="col-11"> NOTE: </div>
+			<div className="col-11"><strong> NOTE: </strong></div>
 		  </div>
+
+		  <br />
+		  <br />
 		)
 	  };
   };
