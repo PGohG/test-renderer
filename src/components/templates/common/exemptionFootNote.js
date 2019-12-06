@@ -15,7 +15,7 @@ const ExemptionFootNote = ({ doc }) => {
 	.value();
 
   const footerTitle = s => {
-	if (s.noteSeq===1) {
+	if (s.noteSeq==1) {
 	  return (
 		  <div className="row">
 			<div className="col-11"> NOTE: </div>
