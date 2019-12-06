@@ -19,10 +19,10 @@ const ExemptionFootNote = ({ doc }) => {
 	  return (
 		  <div className="row">
 			<div className="col-11"><strong> NOTE: </strong></div>
+		  <br />
+		  <br />
 		  </div>
 
-		  <br />
-		  <br />
 		)
 	  };
   };
