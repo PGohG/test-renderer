@@ -55,22 +55,26 @@ const Recipient = ({ doc }) => (
 
     <div className="row">
       <div className="col-3"> ACADEMIC CAREER </div>
-      <div className="col-8"> : &nbsp; {doc.additionalData.transcriptData.career} </div>
+      <div className="auto"> : </div>
+      <div className="col-8"> {doc.additionalData.transcriptData.career} </div>
     </div>
 
     <div className="row">
       <div className="col-3"> PROGRAMME </div>
-      <div className="col-8"> : &nbsp; {doc.additionalData.transcriptData.programName} </div>
+      <div className="auto"> : </div>
+      <div className="col-8"> {doc.additionalData.transcriptData.programName} </div>
     </div>
 
     <div className="row">
       <div className="col-3"> {doc.additionalData.transcriptData.institutionField} </div>
-      <div className="col-8"> : &nbsp; {doc.additionalData.transcriptData.institution} </div>
+      <div className="auto"> : </div>
+      <div className="col-8"> {doc.additionalData.transcriptData.institution} </div>
     </div>
 
     <div className="row">
       <div className="col-3"> {doc.additionalData.transcriptData.graduationField} </div>
-      <div className="col-8"> : &nbsp; {doc.additionalData.transcriptData.graduationDates} </div>
+      <div className="auto"> : </div>
+      <div className="col-8"> {doc.additionalData.transcriptData.graduationDates} </div>
     </div>
 
     <div className="row">
