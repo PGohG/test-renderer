@@ -16,7 +16,7 @@ export const TranscriptFooter = ({ doc }) => (
 	<div className="container">
      <style>
        {`
-       .sign-underline { border-bottom: 1px solid #212529; }
+       .sign-underline { border-bottom: 2px solid #212529; }
        `}
      </style>
 

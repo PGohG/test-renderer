@@ -18,7 +18,7 @@ export const TranscriptFooterNIEC = ({ doc }) => (
      <style>
        {`
        .sign-underline {
-         border-bottom: 1px solid #212529;
+         border-bottom: 2px solid #212529;
        }
 
        `}
