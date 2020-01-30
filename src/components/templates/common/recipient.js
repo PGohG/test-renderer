@@ -28,11 +28,18 @@ const Recipient = ({ doc }) => (
 	: null
 	} </div>
 
-   <div> {doc.additionalData.transcriptData.addressLine2
-	? <div className="row">
-		  <div className="col-2">  </div>
-		  <div className="col-9"> &nbsp; &nbsp; {doc.additionalData.transcriptData.addressLine2} </div>
-	   </div>
+   <div> {doc.additionalData.transcriptData.addressLine2 && doc.additionalData.transcriptData.graduationField.includes("DATE OF GRADUATION")
+	? <div> {doc.additionalData.transcriptData.graduationField.includes("DATE OF GRADUATION")
+	   	? <div className="row">
+	   		  <div className="col-2">  </div>
+	   		  <div className="col-9"> &nbsp; &nbsp; {doc.additionalData.transcriptData.addressLine2} </div>
+	   	 	  <div className="col-4"> {doc.additionalData.transcriptData.graduationField} &nbsp; : &nbsp; {doc.additionalData.transcriptData.graduationDates} </div>
+
+	   	   </div>
+	   	: <div className="row">
+	   		  <div className="col-2">  </div>
+	   		  <div className="col-9"> &nbsp; &nbsp; {doc.additionalData.transcriptData.addressLine2} </div>
+	   	   </div>
 	: null
 	} </div>
 
@@ -81,13 +88,13 @@ const Recipient = ({ doc }) => (
 		} </div>
 	} </div>
 
-   <div> {doc.additionalData.transcriptData.graduationField
+   <div> {doc.additionalData.transcriptData.graduationField.includes("PERIOD OF STUDY")
 	? <div className="row">
 		  <div className="col-3"> {doc.additionalData.transcriptData.graduationField} </div>
 		  <div className="auto"> : </div>
 		  <div className="col-8"> {doc.additionalData.transcriptData.graduationDates} </div>
 	   </div>
-	:  null
+	: null
 	} </div>
 
     <div className="row">
