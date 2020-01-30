@@ -28,7 +28,7 @@ const Recipient = ({ doc }) => (
 	: null
 	} </div>
 
-   <div> {doc.additionalData.transcriptData.addressLine2 && doc.additionalData.transcriptData.graduationField.includes("DATE OF GRADUATION")
+   <div> {doc.additionalData.transcriptData.addressLine2
 	? <div> {doc.additionalData.transcriptData.graduationField.includes("DATE OF GRADUATION")
 	   	? <div className="row">
 	   		  <div className="col-2">  </div>
@@ -40,6 +40,7 @@ const Recipient = ({ doc }) => (
 	   		  <div className="col-2">  </div>
 	   		  <div className="col-9"> &nbsp; &nbsp; {doc.additionalData.transcriptData.addressLine2} </div>
 	   	   </div>
+   	   </div>
 	: null
 	} </div>
 
