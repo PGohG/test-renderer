@@ -73,18 +73,22 @@ const Recipient = ({ doc }) => (
 	   </div>
 	:  <div> {doc.additionalData.transcriptData.institution
 		? <div className="row">
-			  <div className="col-3">  </div>
-			  <div className="col-8"> &nbsp; {doc.additionalData.transcriptData.institution} </div>
+			  <div className="col-3"> </div>
+		  	  <div className="auto"> &nbsp; </div>
+			  <div className="col-8"> {doc.additionalData.transcriptData.institution} </div>
 		   </div>
 		: null
 		} </div>
 	} </div>
 
-    <div className="row">
-      <div className="col-3"> {doc.additionalData.transcriptData.graduationField} </div>
-      <div className="auto"> : </div>
-      <div className="col-8"> {doc.additionalData.transcriptData.graduationDates} </div>
-    </div>
+   <div> {doc.additionalData.transcriptData.graduationField
+	? <div className="row">
+		  <div className="col-3"> {doc.additionalData.transcriptData.graduationField} </div>
+		  <div className="auto"> : </div>
+		  <div className="col-8"> {doc.additionalData.transcriptData.graduationDates} </div>
+	   </div>
+	:  null
+	} </div>
 
     <div className="row">
 		<div className="col-11">
