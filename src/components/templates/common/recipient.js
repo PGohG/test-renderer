@@ -33,7 +33,7 @@ const Recipient = ({ doc }) => (
 	   	? <div className="row">
 	   		  <div className="col-2">  </div>
 	   		  <div className="col-5"> &nbsp; &nbsp; {doc.additionalData.transcriptData.addressLine2} </div>
-	   	 	  <div className="col-4"> {doc.additionalData.transcriptData.graduationField} &nbsp; : &nbsp; {doc.additionalData.transcriptData.graduationDates} </div>
+	   	 	  <div className="col-4"> {doc.additionalData.transcriptData.graduationField} : &nbsp; {doc.additionalData.transcriptData.graduationDates} </div>
 
 	   	   </div>
 	   	: <div className="row">
