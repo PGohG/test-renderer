@@ -63,7 +63,8 @@ const SubjectGrades = ({ doc }) => {
         {semesterSubjects}
 
 		  <div className="row">
-			<div className="col-2"> ***** </div>
+   		    <div className="col-2"> </div>
+			<div className="col-6"> ***** </div>
 		  </div>
 
         <br />
