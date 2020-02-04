@@ -6,10 +6,12 @@ import {
 	renderTwoSignatures,
 	renderITEFooter
 } from "../common/certDetails";
+import { PrintWatermark } from "../common/PrintWatermark";
 
 
 const Template = ({ document }) => (
 	<div>
+	    <PrintWatermark />
 		<div
 		className="container"
 		style={{ border: 5, borderColor: "#AAA", borderStyle: "solid" }}
