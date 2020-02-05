@@ -40,7 +40,6 @@ const Recipient = ({ doc }) => (
 			  	<div className="col-2">  </div>
 			  	<div className="col-9"> &nbsp; &nbsp; {doc.additionalData.transcriptData.addressLine2} </div>
 			  </div>
-		: null
 		} </div>
 	: null
 	} </div>
