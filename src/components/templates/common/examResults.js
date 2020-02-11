@@ -24,7 +24,7 @@ const ExamResults = ({ doc }) => (
 		<br />
 
 		<div className="row">
-			<div className="col-11"> <strong> GRADE POINT AVERAGE : &nbsp; &nbsp; {doc.cumulativeScore.toFixed(3)}</strong>
+			<div className="col-11"> <strong> GRADE POINT AVERAGE &nbsp;  : &nbsp; &nbsp; {doc.cumulativeScore.toFixed(3)}</strong>
 				<br />
 				<br />
 			</div>
@@ -50,8 +50,7 @@ const ExamResults = ({ doc }) => (
 
 	   <div> {doc.additionalData.transcriptData.napfaField
 		? <div className="row">
-			  <div className="col-4"> <strong> {doc.additionalData.transcriptData.napfaField} </strong> </div>
-			  <div className="col-7"> <strong> : &nbsp; &nbsp; {doc.additionalData.transcriptData.napfaStatement} </strong> </div>
+			  <div className="col-11"> <strong> {doc.additionalData.transcriptData.napfaField} &nbsp; : &nbsp; &nbsp; {doc.additionalData.transcriptData.napfaStatement} </strong> </div>
 			  <br />
 			  <br />
 		   </div>
