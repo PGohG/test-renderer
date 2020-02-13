@@ -65,7 +65,7 @@ export const renderFullCertAwardText = doc => (
     </p>
     <div className="row d-flex justify-content-center">
       <span style={arial16Pt}>
-        having successfully completed the programmes of study
+        having successfully completed the programme of study
       </span>
     </div>
     <div className="row d-flex justify-content-center">
