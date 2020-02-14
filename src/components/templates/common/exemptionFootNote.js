@@ -30,7 +30,7 @@ const ExemptionFootNote = ({ doc }) => {
   const footnotes = footer.map((s, j) => {
     const footerfootnotes = s.notes.map((t, i) => (
       <div className="row" key={i}>
-        <div className="col-11">{t.noteSeq} ) &nbsp; {t.note}</div>
+        <div className="col-11">{Number(t.noteSeq).toString()} ) &nbsp; {t.note}</div>
       </div>
     ));
 
